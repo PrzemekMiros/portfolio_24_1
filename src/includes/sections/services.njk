@@ -1,54 +1,45 @@
-<section class="section-services pt-small pb-xlarge bg-dark" data-scroll-section>
-  <div class="big-text fadeIn">
-    <h2 class="xxxl color-heading loop-text">
-      <span>W</span>
-      <span>czym</span>
-      <span>mogę</span>
-      <span>Ci</span>
-      <span>pomóc</span><span class="dot">.</span>
-      <span>W</span>
-      <span>czym</span>
-      <span>mogę</span>
-      <span>Ci</span>
-      <span>pomóc</span><span class="dot">.</span>
-    </h2>
-  </div>
-  <div class="container">
-    <div class="row gx-0 pt-medium">
-      <div class="offset-md-1 col-md-10">
-        <div class="line-x lx-light"></div>
-      </div>
-    </div>
-
-   {% set counter = 1 %}
-    {% for post in collections.services %}
-    <a href="{{ post.url }}" title="{{ post.data.title }}">
-      <div class="service-item">
-        <div class="row gx-0 pt-medium pt-md-large pb-small pb-md-medium">
-          <div class="offset-md-1 col-md-1 fadeIn">
-            <p class="service-number h6 color-text">0{{ counter }}</p>
-          </div>
-          <div class="col-md-3">
-            <h3 class="mt-1 color-heading split-text-lines">{{ post.data.title }}</h3>
-          </div>
-          <div class="offset-md-1 col-md-4">
-            <p class="mt-2 color-text split-text-lines">
-              {{ post.data.description }}
-            </p>
-          </div>
-          <div class="col-md-1 text-md-end fadeIn">
-            <p class="service-arrow h3 mt-1 color-text">+</p>
+<section class="works pt-large pb-large" data-scroll-section>
+  <div class="container" id="fixed-target">
+<!--
+        <div id="gallery-work">
+          <div id="work-images">
+            <div class="work-image" style="background-image: url('https://przemekmiros.pl/realizacje/img/kajaki-img.jpg');"></div>
+            <div class="work-image" style="background-image: url('https://przemekmiros.pl/realizacje/img/business-img.jpg');"></div>
+            <div class="work-image" style="background-image: url('https://przemekmiros.pl/realizacje/img/egp-img.jpg');"></div>
           </div>
         </div>
-        <div class="row gx-0">
-          <div class="offset-md-1 col-md-10">
-            <div class="line-x lx-op lx-light"></div>
-          </div>
-        </div>
+-->
+      <div class="items-works">
+          <div class="line-x lx-op"></div>
+          {% set counter = 1 %} 
+          {% for post in collections.services %}
+            <div class="">
+                <div class="item-work row pt-small pb-medium">
+                    <div class="offset-md-2 col-md-1">
+                        <p class="item-work-number fadeIn">
+                            (0{{ counter }})
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                        <h3 class="xl split-text-lines my-0">{{ post.data.title }}</h3>
+                        <div class="item-work-list">
+                            <span>Usługa 1</span>
+                            <span>Usługa 2</span>
+                            <span>Usługa 3</span>
+                            <span>Usługa 4</span>
+                            <span>Usługa 1</span>
+                            <span>Usługa 2</span>
+                            <span>Usługa 3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offset-md-2 col-md-9">
+                    <div class="line-x lx-op"></div>
+                </div>
+            </div>
+          {% set counter = counter + 1 %} 
+          {% endfor %}
       </div>
-    </a>
-    {% set counter = counter + 1 %}
-    {% endfor %}
 
   </div>
 </section>

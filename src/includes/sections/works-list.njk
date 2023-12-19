@@ -1,0 +1,45 @@
+<section class="works pt-large pb-large" data-scroll-section>
+  <div class="container" id="fixed-target">
+<!--
+        <div id="gallery-work">
+          <div id="work-images">
+            <div class="work-image" style="background-image: url('https://przemekmiros.pl/realizacje/img/kajaki-img.jpg');"></div>
+            <div class="work-image" style="background-image: url('https://przemekmiros.pl/realizacje/img/business-img.jpg');"></div>
+            <div class="work-image" style="background-image: url('https://przemekmiros.pl/realizacje/img/egp-img.jpg');"></div>
+          </div>
+        </div>
+-->
+      <div class="items-works">
+          <div class="line-x lx-op"></div>
+          {% set counter = 1 %} 
+          {% for post in collections.works.slice(0, 5) %}
+            <div class="">
+                <div class="item-work row pt-small pt-md-medium pb-medium">
+                    <div class="offset-md-2 col-md-1">
+                        <p class="item-work-number mb-3 fadeIn">
+                            (0{{ counter }})
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="h1 split-text-lines mt-0 mb-4 mb-md-2">{{ post.data.client }}</h3>
+                        <div class="item-work-list fadeIn">
+                            <span>Design</span>
+                            <span>Development</span>
+                            <span>Pozycjonowanie</span>
+                            <span>Administracja</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 d-none d-md-block">
+                        <svg fill="none" height="36" viewBox="0 0 14 14" width="36" xmlns="http://www.w3.org/2000/svg" class="item-work-arrow fadeIn"><path d="M13 1L1 13" stroke="var(--color-dark-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M3 1H13V11" stroke="var(--color-dark-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></svg>
+                  </div>
+                </div>
+                <div class="offset-md-1 col-md-10">
+                    <div class="line-x lx-op"></div>
+                </div>
+            </div>
+          {% set counter = counter + 1 %} 
+          {% endfor %}
+      </div>
+
+  </div>
+</section>

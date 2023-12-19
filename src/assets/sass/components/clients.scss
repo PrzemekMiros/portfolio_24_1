@@ -1,44 +1,52 @@
-.clients-wrap {
-    margin-top: -1px;
-    margin-left: -1px;
-    overflow: hidden;
+
+.client-card {
+    padding: 3em 2em;
+    border-radius: 15px;
+    background: var(--color-light-2);
+    text-align: center;
 }
 
-.client-item {
-    margin-top: -1px;
-    margin-left: -1px;
-    margin-bottom: -1px;
-    padding: 2.8em 0.8em;
-    border: 1px solid rgba(137, 137, 137, 0.15)
+.client-name p {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: .9rem;
 }
 
-.client-item img {
+.client-card img {
+    width: 75%;
+    margin: 5em auto;
     transition: .3s ease-in-out;
     // filter: grayscale(99%);
     // opacity: .85
 }
 
-.light .client-item img {
+.light .client-card img {
     transition: .3s ease-in-out;
     // filter: grayscale(99%);
     // opacity: .65
 }
 
+.dark .client-card img {
+    -webkit-filter: invert(1)grayscale(100%);
+    filter: invert(1)grayscale(100%);
+    transition: all .3s ease-in-out;
+  }
+
 @media (prefers-color-scheme:dark) {
-.client-item img {
+.client-card img {
     transition: .3s ease-in-out;
     // filter: grayscale(99%) brightness(200%);
     // opacity: .85
 }
 }
 
-.dark .client-item img {
+.dark .client-card img {
         transition: .3s ease-in-out;
         // filter: grayscale(99%) brightness(200%);
         // opacity: .85
     }
 
-.client-item:hover img {
+.client-card:hover img {
     // filter: grayscale(0) brightness(100%);
     opacity: 1
 }

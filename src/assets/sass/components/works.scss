@@ -1,0 +1,19 @@
+
+  .item-work-arrow {
+    margin-top: 1em;
+    width: 3.6em;
+    height: auto;
+    opacity: 0.4
+  }
+
+  .item-work-number {
+    margin-top: .7em;
+    opacity: .35
+  }
+
+
+@media(min-width:767px) {
+  .works-grid-item:nth-child(even) {
+    transform: translateY(10em);
+  }
+}

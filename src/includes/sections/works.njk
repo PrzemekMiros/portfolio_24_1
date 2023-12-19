@@ -1,0 +1,69 @@
+<section class="pt-medium pb-medium" data-scroll-section>
+  <div class="container">
+    <div class="offset-md-1 col-md-10">
+      <div class="row gx-6">
+        {% for post in collections.works.slice(0, 4) %}
+        <div class="col-md-6 works-grid-item">
+          <div class="fadeIn mb-0">
+            <a href="{{ post.url }}" title="{{ post.data.title }}">
+              <div class="portfolio-item">
+                <div class="parallax-wrap aspect_16-13">
+                  <img
+                    src="{{ post.data.thumbnail }}"
+                    alt="{{ post.data.title }}"
+                    loading="lazy"
+                  />
+                </div> 
+              </div>
+            </a>
+          </div>
+  
+              <a href="{{ post.url }}" title="{{ post.data.client }}">
+                <p class="color-accent-1 split-text-lines mt-4 mb-2">
+                   {{ post.data.client }}
+                </p>
+                <h3 class="archive-post-title split-text-lines h4 my-3">
+                  {{ post.data.title }}
+                </h3>
+              </a>
+              <a
+                href="{{ post.url }}"
+                title="Zobacz więcej"
+                class="button magnetic fadeIn mt-2 mb-4"
+                data-strength="100"
+                data-strength-text="50"
+              >
+                <span>Zobacz więcej</span>
+                <svg
+                  width="11"
+                  height="11"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13 1L1 13"
+                    stroke="var(--color-accent-1)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M3 1H13V11"
+                    stroke="var(--color-accent-1)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </a>
+  
+          <div class="pb-small pb-md-large">
+            <div class="line-x lx-1 lx-op"></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

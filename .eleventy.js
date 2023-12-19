@@ -36,9 +36,10 @@ module.exports = function(eleventyConfig) {
         });
 
         // Collections towns
-        eleventyConfig.addCollection('towns', function(collectionApi) {
-        return collectionApi.getFilteredByGlob('src/miasta/**/*.md').reverse();
-        });
+        // eleventyConfig.addCollection('towns', function(collectionApi) {
+        // return collectionApi.getFilteredByGlob('src/miasta/**/*.md').reverse();
+        // });
+
 
     eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt) => {
         if (!alt) {

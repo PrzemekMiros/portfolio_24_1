@@ -1,6 +1,6 @@
 .site-footer {
     position: relative;
-    background: #11171a;
+    background: var(--color-dark-1);
     background-size: cover;
     background-position: center
 }
@@ -9,79 +9,45 @@
     position: relative
 }
 
-.lets-talk,
-.site-footer a:not(.button-big, .color-link) {
-    color: #fff
-}
-
-.footer-top {
+.lets-talk {
+    display: inline-block;
     position: relative;
-    padding: 150px 0 20px;
-    z-index: 9
-}
-
-.footer-top .lets-talk {
-    font-family: var(--font-primary);
-    font-weight: 700
-}
-
-.footer-top .button-big {
-    margin-bottom: -110px;
-    margin-top: 60px
-}
-
-.footer-bottom {
-    padding: 0 0 70px;
-}
+  }
+  .lets-talk::before,
+  .lets-talk::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.06em;
+    bottom: -0.2em;
+    left: 0;
+    background: currentcolor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .lets-talk::before {
+    transform: scaleX(1);
+  }
+  .lets-talk::after {
+    transform: scaleX(0);
+    background: var(--color-light-2)
+  }
+  .lets-talk:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 
 .footer-arrow {
-    width: 24px;
-    transform: rotate(90deg) translateX(7px)
-}
-
-.footer-mail {
-    font-size: 20px
-}
-
-.copywright {
-    padding-bottom: 2em
-}
-
-.copywright span {
-    font-size: 12px;
-    font-weight: 200;
-    opacity: .8
-}
-
-.copywright a {
-    font-size: 12px;
-    font-weight: 300;
-    opacity: .8
+    width: clamp(56px, 8vw, 130px);
+    height: auto;
 }
 
 @media(min-width:767px) {
     .site-footer {
         z-index: 0
     }
-    .footer-top .button-big {
-        margin-top: 170px
-    }
-    .footer-mail {
-        font-size: 38px
-    }
-    .footer-arrow {
-        width: 28px
-    }
 }
 
-@media(min-width:1200px) {
-    .footer-arrow {
-        width: 46px;
-        margin-bottom: 7px
-    }
-    .footer-top .button-big {
-        margin-top: 9.2em;
-        margin-bottom: -5.5em
-    }
-}
 

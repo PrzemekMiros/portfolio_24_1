@@ -1,31 +1,9 @@
 </div>
 </div>
-<!--<div class="page-overlay-in"></div>-->
 <!-- Scripts -->
 <script src="/assets/js/vendor.js"></script>
+<script src="/assets/js/animations.js"></script>
 <script src="/assets/js/script.js"></script>
-<script>
-const changeTheme = document.querySelector(".change-theme");
-let theme = localStorage.getItem("theme");
-changeTheme.addEventListener('click', () => {
-    if (theme === "dark") {
-        document.querySelector("html").classList.remove("dark");
-        document.querySelector("html").classList.add("light");
-        theme = "light";
-    } else {
-        document.querySelector("html").classList.add("dark");
-        document.querySelector("html").classList.remove("light");
-        theme = "dark";
-    }
-    localStorage.setItem("theme", theme);
-});
-if (theme === "dark") {
-    document.querySelector("html").classList.add("dark");
-}
-if (theme === "light") {
-    document.querySelector("html").classList.add("light");
-}
-</script>
 <script>
   // Init locomotive
   const locoScroll = new LocomotiveScroll({
@@ -50,13 +28,13 @@ if (theme === "light") {
     locoScroll.destroy(), locoScroll.init(), scrollTo(top)
   });
   document.addEventListener("swup:animationInDone", () => {
-    animationMain()
+    appMain(); animationMain()
   }), console.clear();
 </script>
 
 <script>
 window.addEventListener('load', function(){
-  animationMain()
+  appMain(); animationMain()
   });
 </script>
 

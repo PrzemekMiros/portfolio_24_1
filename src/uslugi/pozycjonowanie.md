@@ -1,5 +1,5 @@
 ---
-title: Pozycjonowanie w Google
+title: Pozycjonowanie 
 description: Analiza i dobór słów kluczowych. Optymalizacja techniczna serwisów. Planowanie treści i pozyskiwanie linków zewnętrznych.
 date: 2022-07-15
 thumbnail: /assets/img/services/pozycjonowanie.jpg

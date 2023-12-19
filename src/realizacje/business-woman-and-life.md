@@ -1,6 +1,6 @@
 ---
 author: Przemek
-client: Business Woman Life
+client: Business Woman
 date: 2023-08-03T20:19:43.571Z
 thumbnail: /realizacje/img/business-thumb-big.jpg
 imageMain: /realizacje/img/business-img.jpg

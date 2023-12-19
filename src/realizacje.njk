@@ -5,8 +5,8 @@ description: Zobacz wybrane realizacje stron, sklepów i serwisów internetowych
 ---
 
 <div class="row gx-4 mb-3 mb-md-0">
-  <div class="offset-md-1 col-md-8">
-    <h1 class="xxl split-text-lines">
+  <div class="col-md-10">
+    <h1 class="xl split-text-lines">
       {{ title }}<span class="dot">.</span>
     </h1>
   </div>
@@ -40,17 +40,14 @@ description: Zobacz wybrane realizacje stron, sklepów i serwisów internetowych
   </div>
 </div>
 
-<div class="row gx-4 pb-medium pb-md-large">
-  <div class="offset-md-1 col-md-10">
+<div class="pb-medium pb-md-large">
     <div class="line-x lx-2"></div>
-  </div>
 </div>
 
             {% for post in collections.works %}
                 <div class="works-grid-item">             
-                    <div class="row gx-0 flex-row-reverse archive-post pb-xsmall pb-md-medium">
-                      <div class="col-md-1"></div>
-                      <div class="col-md-5 fadeIn mb-0">
+                    <div class="row gx-5 flex-row-reverse archive-post pb-xsmall pb-md-medium">
+                      <div class="col-md-6 fadeIn mb-0">
                         <a href="{{ post.url }}" title="{{ post.data.title }}">
                          <div class="portfolio-item">
                           <div class="parallax-wrap aspect_16-12">
@@ -59,7 +56,7 @@ description: Zobacz wybrane realizacje stron, sklepów i serwisów internetowych
                          </div>
                         </a>
                       </div>
-                      <div class="offset-md-1 col-md-5 d-flex align-items-center">
+                      <div class="col-md-6 d-flex align-items-center">
                         <div class="pr-md-5">
                             <a href="{{ post.url }}" title="{{ post.data.client }}">
                                 <p class="archive-post-client split-text-lines mt-4 mb-2">

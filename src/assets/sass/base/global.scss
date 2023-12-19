@@ -2,33 +2,26 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     color: var(--color-text);
-    font-family: var(--font-primary)
+    font-family: var(--font-secondary)
   }
-  
-body::before {
-  position: fixed;
-  content: "";
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999
-}
-
-body::after {
-  position: fixed;
-  content: "";
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 999
-}
 
   .scrollContainer {
     background-color: var(--color-light-1);
   }
 
-  img {
+  main section:last-child{
+    position: relative;
+    margin-bottom: -45px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    background: var(--color-light-1);
+    z-index: 9;
+  }
+
+  img,
+  video {
     display: block;
     width: 100%;
     height: auto
@@ -83,33 +76,9 @@ body::after {
     list-style: inherit
   }
 
-.h-100 {
-  height: 100%
+.blend-mode {
+  mix-blend-mode: difference
 }
-.w-100 {
-  width: 100%
-}
-.w-200 {
-  white-space: nowrap;
-}
-.w-200 span {
-  display: inline-block
-}
-
-.p-relative {
-  position: relative
-}
-
-.loop-text {
-    display: inline-block;
-    white-space: nowrap;
-  }
-.loop-text span {
-    display: inline-block
-  }
-  section {
-    max-width: 100%
-  }
 
 .dot {
   color: var(--color-accent-1);
@@ -131,33 +100,6 @@ body::after {
   html {
     overflow-y: hidden
   }
-  body::before {
-    width: calc(100vw - 20px);
-    height: calc(100vh - 20px);
-    border: 10px solid var(--color-dark-1)
-  }
-  
-}
-
-.about-img-wrap {
-  position: relative;
-}
-
-.image-wrapper img {
-  border-radius: 10px
-}
-
-@media(min-width:767px) {
-  .about-img-wrap div:nth-child(2) {
-    position: absolute;
-    bottom: 15%;
-    left: -38%;
-    width: 65%;
-    z-index: 1
-  }
-  .works-grid .works-grid-item:nth-child(even) {
-    transform: translateY(6em)
-  }
 }
 
 .link-arrow {
@@ -172,112 +114,6 @@ body::after {
 .link-arrow:hover svg {
   transform: rotate(45deg)
 }
-
-/*  Line
---------------------------------- */
-
-.line-x {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-border);
-  opacity: .6
-}
-.line-x-static {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-border);
-  opacity: .2
-}
-.lx-1 {
-  height: 1px
-}
-.lx-2 {
-  height: 2px
-}
-.lx-op {
-  opacity: .15
-}
-.lx-light {
-  background-color: #fff
-}
-
-.h-line-y {
-  position: relative;
-  display: block;
-  width: 1px;
-  height: 100%;
-  background-color: #fff;
-  opacity: .2;
-  z-index: 99
-}
-
-.page-wycena main {
-  padding-top: 0
-}
-
-.section-brief {
-  height: 100vh;
-  margin-bottom: 0
-}
-
-.brief {
-  width: 1px;
-  min-width: 100%;
-  min-height: calc(100% - 10px);
-  height: calc(100% - 10px);
-  border: none;
-  opacity: 0;
-  animation-name: fadeIn;
-  animation-delay: 1s;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0
-  }
-  100% {
-    opacity: 1
-  }
-}
-
-
-.scrollprogress-wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: calc(100vh + 60px);
-  width: 4px;
-  z-index: 99
-}
-
-.scrollprogress {
-  position: fixed;
-  top: -5px;
-  left: 0;
-  -webkit-appearance: none;
-  appearance: none;
-  width: 4px;
-  height: 0;
-  border: none;
-  background: var(--color-dark-1);
-  opacity: .9
-}
-.scrollprogress::-webkit-progress-bar {
-  background: transparent;
-}
-.scrollprogress::-webkit-progress-value {
-  background: #222;
-  background-attachment: fixed;
-}
-.scrollprogress::-moz-progress-bar {
-  background: #222;
-  background-attachment: fixed;
-}
-
 
 
 .hidden {
