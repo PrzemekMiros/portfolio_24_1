@@ -1,14 +1,5 @@
-<section class="works pt-large pb-large" data-scroll-section>
+<section class="works pt-large pb-medium" data-scroll-section>
   <div class="container" id="fixed-target">
-<!--
-        <div id="gallery-work">
-          <div id="work-images">
-            <div class="work-image" style="background-image: url('https://przemekmiros.pl/realizacje/img/kajaki-img.jpg');"></div>
-            <div class="work-image" style="background-image: url('https://przemekmiros.pl/realizacje/img/business-img.jpg');"></div>
-            <div class="work-image" style="background-image: url('https://przemekmiros.pl/realizacje/img/egp-img.jpg');"></div>
-          </div>
-        </div>
--->
       <div class="items-works">
           <div class="line-x lx-op"></div>
           {% set counter = 1 %} 
@@ -17,7 +8,7 @@
                 <div class="item-work row pt-small pt-md-medium pb-medium">
                     <div class="offset-md-2 col-md-1">
                         <p class="item-work-number mb-3 fadeIn">
-                            (0{{ counter }})
+                            0{{ counter }}
                         </p>
                     </div>
                     <div class="col-md-6">
@@ -40,6 +31,5 @@
           {% set counter = counter + 1 %} 
           {% endfor %}
       </div>
-
   </div>
 </section>

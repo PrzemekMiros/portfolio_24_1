@@ -290,6 +290,17 @@ opacity: 0.1;
         </div>
       </div>
     </header>
+
+    <section class="works reveal-img">
+        <div id="gallery-work">
+          <div id="work-images">
+            {% for post in collections.works.slice(0, 5) %}
+              <div class="work-image" style="background-image: url('{{ post.data.thumbnail }}');"></div>
+            {% endfor %}
+          </div>
+        </div>
+    </section>
+
     <div id="swup" class="transition-blur">
       <div class="sticky" data-scroll-sticky data-scroll-target="#pinSection">
         <section class="fullpage-menu">

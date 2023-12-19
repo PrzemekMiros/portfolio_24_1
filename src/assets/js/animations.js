@@ -269,6 +269,60 @@ function animationMain() {
      }
    });
    };
+
+
+// Reveal images parallax
+const elementsWorks = document.querySelectorAll(".item-work");
+const slidePicWorks = document.querySelector("#gallery-work");
+const slidePicsWorks = document.querySelector("#work-images");
+
+gsap.set(slidePicWorks, { autoAlpha: 0 });
+
+elementsWorks.forEach((element, index) => {
+  element.addEventListener("mouseenter", function () {
+    gsap.to(slidePicsWorks, {
+      marginTop: `-${320 * index}px`,
+      ease: "power2.in",
+      duration: .2, // Image in wrapper
+    });
+  });
+
+  element.addEventListener("mouseleave", function () {
+    gsap.to(element, { 
+      color: "initial", 
+      duration: .1, // Image fade out
+    });
+  });
+});
+
+window.addEventListener("mousemove", function (e) {
+  gsap.to(slidePicWorks, {
+    top: `${e.clientY}px`,
+    left: `${e.clientX}px`,
+    xPercent: -40,
+    yPercent: -45,
+    duration: .1, // Main image wrap
+  });
+});
+
+document
+  .querySelector(".items-works")
+  .addEventListener("mouseenter", function () {
+    gsap.to(slidePicWorks, {
+      autoAlpha: 1,
+      duration: .1, // Image fade in
+    });
+  });
+
+document
+  .querySelector(".items-works")
+  .addEventListener("mouseleave", function () {
+    gsap.to(slidePicWorks, {
+      autoAlpha: 0,
+      duration: .1, // Image fade in
+    });
+  });
+
    
    // End animation
    }
