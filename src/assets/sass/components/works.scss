@@ -93,9 +93,3 @@
   .item-work:hover + .item-work-arrow {
     opacity: 1
   }
-
-@media(min-width:767px) {
-  .works-grid-item:nth-child(even) {
-    transform: translateY(10em);
-  }
-}
