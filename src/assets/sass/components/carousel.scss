@@ -124,7 +124,7 @@
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
-  top: 22%;
+  top: 0;
   z-index: 10;
   background: transparent;
   border: none;
@@ -589,4 +589,11 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-bullet-active {
   background: #fff;
+}
+
+@media(min-width:767px) {
+  .swiper-button-next,
+.swiper-button-prev {
+  top: 22%
+}
 }

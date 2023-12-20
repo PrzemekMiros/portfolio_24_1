@@ -291,7 +291,7 @@ elementsWorks.forEach((element, index) => {
   element.addEventListener("mouseleave", function () {
     gsap.to(element, { 
       color: "initial", 
-      duration: .1, // Image fade out
+      duration: .05, // Image fade out
     });
   });
 });
@@ -311,7 +311,7 @@ document
   .addEventListener("mouseenter", function () {
     gsap.to(slidePicWorks, {
       autoAlpha: 1,
-      duration: .1, // Image fade in
+      duration: .05, // Image fade in
     });
   });
 
@@ -320,7 +320,7 @@ document
   .addEventListener("mouseleave", function () {
     gsap.to(slidePicWorks, {
       autoAlpha: 0,
-      duration: .1, // Image fade in
+      duration: .05, // Image fade in
     });
   });
 };
