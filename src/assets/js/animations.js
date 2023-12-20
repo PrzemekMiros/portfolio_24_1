@@ -115,6 +115,7 @@ function animationMain() {
    if(document.querySelector('.magnetic')) {
      var magnets = document.querySelectorAll('.magnetic');
      var magnetText = document.querySelectorAll(".btn-text");
+     gsap.set(".magnetic", {display: "inline-block"})
      if(window.innerWidth > 767){
        // Mouse Reset
        magnets.forEach( (magnet) => {
@@ -272,7 +273,9 @@ function animationMain() {
 
 
 // Reveal images parallax
+if (document.querySelector(".works")) {
 if (window.matchMedia("(min-width: 767px)").matches) {
+
 const elementsWorks = document.querySelectorAll(".item-work");
 const slidePicWorks = document.querySelector("#gallery-work");
 const slidePicsWorks = document.querySelector("#work-images");
@@ -323,6 +326,7 @@ document
       duration: .05, // Image fade in
     });
   });
+};
 };
 
    

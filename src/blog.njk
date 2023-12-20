@@ -8,6 +8,7 @@ pagination:
     alias: blog
 ---
 
+<div class="col-md-10 mx-auto">
   <div class="row gx-4 mb-3 mb-md-0">
     <div class="col-md-10">
       <h1 class="xl split-text-lines">
@@ -58,9 +59,10 @@ pagination:
         </a>
         </div>
       </div>
-      <div class="row gx-4"> {% for post in blog %} 
+      <div class="row gx-4"> 
+        {% for post in blog %} 
         <div class="col-md-4 pb-medium"> 
-        <a href="{{ post.url }}" title="{{ post.data.title }}">
+            <a href="{{ post.url }}" title="{{ post.data.title }}">
                         <div class="portfolio-item fadeIn">
                                 <div class="parallax-wrap aspect_16-9">
                                     <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}" loading="lazy" />
@@ -88,10 +90,11 @@ pagination:
                             </svg>
                         </a>
                         <div class="line-x lx-1 lx-op"></div>
-      </div> 
+             </div> 
       {% endfor %} 
     </div>
       <div class="row gx-4">
+</div>
         <div class="col-md-6">
           <nav>
             <ul class="pagination d-flex fadeIn"> {%- for pageEntry in pagination.pages %} 

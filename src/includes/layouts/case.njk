@@ -21,11 +21,11 @@
             </div>
             <div class="col-md-4">
                 <p class="small">
-                    Wykonano
+                    Usługa
                 </p>
                 <div class="line-x lx-op"></div>
                 <p class="mt-4">
-                  {{ date | dateDisplay }}
+                  Projekt, Kodowanie
                 </p>
             </div>
             <div class="col-md-4">
@@ -52,41 +52,22 @@
     </div>
 
     <div class="row fadeIn">
-      <div class="offset-md-2 col-md-8">
+      <div class="offset-md-2 col-md-6">
         {{ content | safe }}
+      </div>
+      <div class="offset-md-1 col-md-2 pt-xsmall">
         <a
-          href="{{ link }}"
-          title="Zobacz online"
-          class="button magnetic"
-          target="_blank"
-          rel="nofollow"
-          data-strength="100"
-          data-strength-text="50"
-        >
-          <span>Zobacz online</span>
-          <svg
-            fill="none"
-            viewBox="0 0 14 14"
-            xmlns="http://www.w3.org/2000/svg"
-            height="11"
-            width="11"
-          >
-            <path
-              d="M13 1L1 13"
-              stroke="var(--color-accent-1)"
-              stroke-linecap="round"
-              stroke-width="2"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              d="M3 1H13V11"
-              stroke="var(--color-accent-1)"
-              stroke-linecap="round"
-              stroke-width="2"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        </a>
+        href="{{ link }}"
+        title="Zobacz online"
+        class="magnetic"
+        target="_blank"
+        rel="nofollow"
+        data-strength="100"
+        data-strength-text="50"
+      >
+          <svg width="55px" height="55px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+            <g><path fill="var(--color-dark-1)" d="M83.3,79.7c0,2-1.6,3.6-3.6,3.6H20.3c-2,0-3.6-1.6-3.6-3.6V20.3c0-2,1.6-3.6,3.6-3.6h23.4V9.5H20.3   c-6,0-10.8,4.8-10.8,10.8v59.4c0,6,4.8,10.8,10.8,10.8h59.4c6,0,10.8-4.8,10.8-10.8V56.3h-7.2V79.7z"/><polygon fill="var(--color-dark-1)" points="56.3,9.5 56.3,16.7 78.2,16.7 49.9,45 55,50.1 83.3,21.8 83.3,43.7 90.5,43.7 90.5,9.5  "/></g></svg>
+      </a>
       </div>
     </div>
 

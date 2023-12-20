@@ -44,6 +44,23 @@
     height: auto;
 }
 
+.footer-card ul {
+  margin-top: 0;
+}
+
+.footer-card li {
+  margin-bottom: 0;
+}
+
+.footer-card li p {
+  opacity: .6;
+}
+
+.footer-card li {
+  font-size: 14px;
+  color: var(--color-light-1)
+}
+
 @media(min-width:767px) {
     .site-footer {
         z-index: 0
