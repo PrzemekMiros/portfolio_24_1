@@ -54,7 +54,7 @@ if (document.querySelector('.swiper')) {
         slidesPerView: 2
       },
       1024: {
-        slidesPerView: 3
+        slidesPerView: 4
       },
       1600: {
         slidesPerView: 4

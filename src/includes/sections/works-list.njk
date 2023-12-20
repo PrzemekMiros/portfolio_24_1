@@ -4,7 +4,7 @@
           <div class="line-x lx-op"></div>
           {% set counter = 1 %} 
           {% for post in collections.works.slice(0, 5) %}
-            <div class="">
+            <a href="{{ post.url }}" title="{{ post.data.client }}">
                 <div class="item-work row pt-small pt-md-medium pb-medium">
                     <div class="offset-md-2 col-md-1">
                         <p class="item-work-number mb-3 fadeIn">
@@ -27,7 +27,7 @@
                 <div class="offset-md-1 col-md-10">
                     <div class="line-x lx-op"></div>
                 </div>
-            </div>
+            </a>
           {% set counter = counter + 1 %} 
           {% endfor %}
       </div>

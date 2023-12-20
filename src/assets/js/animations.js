@@ -272,6 +272,7 @@ function animationMain() {
 
 
 // Reveal images parallax
+if (window.matchMedia("(min-width: 767px)").matches) {
 const elementsWorks = document.querySelectorAll(".item-work");
 const slidePicWorks = document.querySelector("#gallery-work");
 const slidePicsWorks = document.querySelector("#work-images");
@@ -322,6 +323,7 @@ document
       duration: .1, // Image fade in
     });
   });
+};
 
    
    // End animation
