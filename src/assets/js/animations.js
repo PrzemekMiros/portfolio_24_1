@@ -21,12 +21,21 @@ function animationMain() {
      new ResizeObserver(() => locoScroll.update()).observe(document.querySelector(".scrollContainer"));
 
      // Header scrolled
+     let lastScrollPos = 0;
      locoScroll.on('scroll', (position) => {
-       if ((position.scroll.y) > 50) {
-       document.querySelector('.site-header').classList.add('scrolled');
-     } else {
-       document.querySelector('.site-header').classList.remove('scrolled');
-     }  
+       const currentScrollPos = position.scroll.y;
+
+       if (currentScrollPos > 50) {
+         if (currentScrollPos > lastScrollPos) {
+           document.querySelector('.site-header').classList.add('scrolled');
+         } else {
+           document.querySelector('.site-header').classList.remove('scrolled');
+         }
+       } else {
+         document.querySelector('.site-header').classList.remove('scrolled');
+       }
+    
+       lastScrollPos = currentScrollPos;
      });
 
     // Paragraph --------------------------------------------------------------
