@@ -80,17 +80,22 @@ module.exports = function(eleventyConfig) {
         });
   
   
-        eleventyConfig.addNunjucksAsyncShortcode('thumbImage', async (src, alt, folder) => {
+        eleventyConfig.addNunjucksAsyncShortcode('thumbImage', async (src, alt, type) => {
           if (!alt) {
             throw new Error(`Missing \`alt\` on myImage from: ${src}`);
           }
         
-          let outputDir = folder === 'blog' ? './public/blog/img/' : './public/realizacje/img/';
+          let outputDir = '';
+          if (type === 'realizacje') {
+            outputDir = './public/realizacje/img/';
+          } else if (type === 'blog') {
+            outputDir = './public/blog/img/';
+          }
         
           let stats = await Image(src, {
             widths: [25, 320, 640, 960],
             formats: ['jpeg', 'webp'],
-            urlPath: `/${folder}/img/`,
+            urlPath: `/${type}/img/`, // Assuming the input images are located in /realizacje/img/ or /blog/img/
             outputDir: outputDir,
           });
         
