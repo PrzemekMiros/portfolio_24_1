@@ -13,4 +13,7 @@ link: https://agencjacosmos.pl/
 thumbnail: /realizacje/img/cosmos-thumb-big.jpg
 imageMain: /realizacje/img/cosmos-img.jpg
 ---
+
+## Agencja aktorska
+
 Strona internetowa dla agencji aktorskiej. Projekt graficzny, dedykowany motyw na Wp, własne typy wpisów, niestandardowe pola, zmiany układu w archiwach, schowek. Optymalizacja pod wyszukiwarki.

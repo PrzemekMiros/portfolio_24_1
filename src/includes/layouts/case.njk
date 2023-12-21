@@ -10,30 +10,30 @@
           </h1>
           <div class="row gx-5">
             <div class="col-md-4">
-                    <p class="small">
+                    <p class="split-text-lines small">
                         Kategoria
                     </p>
-                    <div class="line-x lx-op"></div>
-                    <p class="mt-4">
+                    <div class="split-text-lines line-x lx-op"></div>
+                    <p class="split-text-lines mt-4">
                       {{ category }}
                     </p>
 
             </div>
             <div class="col-md-4">
-                <p class="small">
+                <p class="split-text-lines small">
                     Usługa
                 </p>
                 <div class="line-x lx-op"></div>
-                <p class="mt-4">
+                <p class="split-text-lines mt-4">
                   Projekt, Kodowanie
                 </p>
             </div>
             <div class="col-md-4">
-                <p class="small">
+                <p class="split-text-lines small">
                     Wykonano
                 </p>
                 <div class="line-x lx-op"></div>
-                <p class="mt-4">
+                <p class="split-text-lines mt-4">
                   {{ date | dateDisplay }}
                 </p>
             </div>
@@ -42,12 +42,8 @@
       </div>
 
     <div class="offset-md-1 col-md-10">
-        <div class="parallax-wrap aspect_16-12 fadeIn mb-3 mb-lg-5">
-            <img
-              src="{{ imageMain | url }}"
-              alt="{{ title }}"
-              class="single-post-image img-fluid"
-            />
+        <div class="parallax-wrap aspect_16-12 fadeIn mb-4 mb-lg-5">
+           {% Image "public" + imageMain, title, "single-post-image img-fluid" %}
           </div>
     </div>
 
@@ -55,11 +51,11 @@
       <div class="offset-md-2 col-md-6">
         {{ content | safe }}
       </div>
-      <div class="offset-md-1 col-md-2 pt-xsmall">
+      <div class="offset-md-1 col-md-2">
         <a
         href="{{ link }}"
         title="Zobacz online"
-        class="magnetic"
+        class="magnetic mt-5"
         target="_blank"
         rel="nofollow"
         data-strength="100"

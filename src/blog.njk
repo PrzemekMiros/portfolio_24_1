@@ -65,7 +65,7 @@ pagination:
             <a href="{{ post.url }}" title="{{ post.data.title }}">
                         <div class="portfolio-item fadeIn">
                                 <div class="parallax-wrap aspect_16-9">
-                                    <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}" loading="lazy" />
+                                  {% thumbImage "public" + post.data.thumbnail, post.data.title, "blog" %}
                                 </div>
                         </div>
                         </a>

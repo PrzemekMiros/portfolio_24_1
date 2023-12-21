@@ -1,6 +1,6 @@
 ---
 layout: layouts/case.njk
-client: SPZOZ Grabów nad Pilicą
+client: SPZOZ Grabów
 title: Przychodnia zdrowia
 description: "Strona dla Przychodni Zdrowia. Indywidualny projekt graficzny.
   Technologia Jamstack (Eleventy.js i Netlify CMS). Animacje: GSAP, Locomotive
@@ -13,5 +13,8 @@ link: https://przychodniagrabow.pl/
 thumbnail: /realizacje/img/przychodnia-thumb-big.jpg
 imageMain: /realizacje/img/przychodnia.jpg
 ---
+
+## Przychodnia zdrowia
+
 Strona dla Przychodni Zdrowia. Indywidualny projekt graficzny. Technologia Jamstack (Eleventy.js i Netlify CMS). Animacje: GSAP, Locomotive Scroll, Swup.js
 

@@ -40,46 +40,87 @@ module.exports = function(eleventyConfig) {
         // return collectionApi.getFilteredByGlob('src/miasta/**/*.md').reverse();
         // });
 
-
-    eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt) => {
-        if (!alt) {
-          throw new Error(`Missing \`alt\` on myImage from: ${src}`);
-        }
-    
-        let stats = await Image(src, {
-          widths: [25, 320, 640, 960, 1200, 1800, 2400],
-          formats: ['jpeg', 'webp'],
-          urlPath: '/assets/img/',
-          outputDir: './public/assets/img/',
+        eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt) => {
+          if (!alt) {
+            throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+          }
+      
+          let stats = await Image(src, {
+            widths: [25, 320, 640, 960, 1200, 1800, 2400],
+            formats: ['jpeg', 'webp'],
+            urlPath: '/assets/img/',
+            outputDir: './public/assets/img/',
+          });
+      
+          let lowestSrc = stats['jpeg'][0];
+      
+          const srcset = Object.keys(stats).reduce(
+            (acc, format) => ({
+              ...acc,
+              [format]: stats[format].reduce(
+                (_acc, curr) => `${_acc} ${curr.srcset} ,`,
+                '',
+              ),
+            }),
+            {},
+          );
+      
+          const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
+      
+          const img = `<img
+            loading="lazy"
+            alt="${alt}"
+            src="${lowestSrc.url}"
+            sizes='(min-width: 1024px) 1024px, 100vw'
+            srcset="${srcset['jpeg']}"
+            width="${lowestSrc.width}"
+            height="${lowestSrc.height}">`;
+      
+          return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
-    
-        let lowestSrc = stats['jpeg'][0];
-    
-        const srcset = Object.keys(stats).reduce(
-          (acc, format) => ({
-            ...acc,
-            [format]: stats[format].reduce(
-              (_acc, curr) => `${_acc} ${curr.srcset} ,`,
-              '',
-            ),
-          }),
-          {},
-        );
-    
-        const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
-    
-        const img = `<img
-          loading="lazy"
-          alt="${alt}"
-          src="${lowestSrc.url}"
-          sizes='(min-width: 1024px) 1024px, 100vw'
-          srcset="${srcset['jpeg']}"
-          width="${lowestSrc.width}"
-          height="${lowestSrc.height}">`;
-    
-        return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
-      });
-
+  
+  
+        eleventyConfig.addNunjucksAsyncShortcode('thumbImage', async (src, alt, folder) => {
+          if (!alt) {
+            throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+          }
+        
+          let outputDir = folder === 'blog' ? './public/blog/img/' : './public/realizacje/img/';
+        
+          let stats = await Image(src, {
+            widths: [25, 320, 640, 960],
+            formats: ['jpeg', 'webp'],
+            urlPath: `/${folder}/img/`,
+            outputDir: outputDir,
+          });
+        
+          let lowestSrc = stats['jpeg'][0];
+        
+          const srcset = Object.keys(stats).reduce(
+            (acc, format) => ({
+              ...acc,
+              [format]: stats[format].reduce(
+                (_acc, curr) => `${_acc} ${curr.srcset} ,`,
+                '',
+              ),
+            }),
+            {},
+          );
+        
+          const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
+        
+          const img = `<img
+            loading="lazy"
+            alt="${alt}"
+            src="${lowestSrc.url}"
+            sizes='(min-width: 1024px) 1024px, 100vw'
+            srcset="${srcset['jpeg']}"
+            width="${lowestSrc.width}"
+            height="${lowestSrc.height}">`;
+        
+          return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
+        });
+        
 
       // Code blocks
       eleventyConfig.addPlugin(codeStyleHooks, {

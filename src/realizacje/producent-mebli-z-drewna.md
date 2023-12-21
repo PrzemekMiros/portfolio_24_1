@@ -14,4 +14,7 @@ link: https://moneso.pl/
 thumbnail: /realizacje/img/moneso-thumb-big.jpg
 imageMain: /realizacje/img/moneso-img.jpg
 ---
+
+## Meble z litego drewna
+
 Strona internetowa ze sklepem dla producenta mebli z drewna. Wykonana według projektu dostarczonego przez klienta. Customowy motyw na Wp, własne pola, zaawansowane animacje. Sklep oparty na Woocommerce, płatności online.

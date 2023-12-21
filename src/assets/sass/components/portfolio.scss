@@ -3,13 +3,11 @@
     overflow: hidden;
     border-radius: 9px
 }
-.portfolio-item div,
-.photo.portfolio-item img {
+.portfolio-item div {
     // filter: grayscale(99%);
     transition: all 1.3s cubic-bezier(.79,0,.07,.88)
 }
-.portfolio-item:hover div,
-.photo.portfolio-item:hover img {
+.portfolio-item:hover .parallax-wrap {
     transform: scale(1.09);
     filter: grayscale(0%)
 }
