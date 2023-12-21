@@ -54,12 +54,12 @@
       width: 100%;
       transform: scaleX(0);
       border-radius: 5px;
-      height: 0.3em;
+      height: 0.5em;
       bottom: -1.2em;
       left: 0;
       background: var(--color-light-2);
       transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
+      transition: transform 0.5s ease-out;
     }
     .js-link-item::before {
       transform: scaleX(1);

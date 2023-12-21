@@ -45,6 +45,7 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+  <link rel="stylesheet" href="/static/cookieconsent.css" media="print" onload="this.media='all'">
     
   <style>
     @font-face {
@@ -291,8 +292,8 @@ opacity: 0.1;
       </div>
     </header>
 
-    <section class="works reveal-img d-none d-md-block">
-        <div id="gallery-work">
+    <section class="works reveal-img">
+        <div id="gallery-work" class="d-none d-md-block">
           <div id="work-images">
             {% for post in collections.works.slice(0, 5) %}
               <div class="work-image" style="background-image: url('{{ post.data.thumbnail }}');"></div>

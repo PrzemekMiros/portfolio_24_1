@@ -346,7 +346,7 @@ targetItems.forEach((targetItem) => {
 
 // Reveal images parallax
 if (document.querySelector(".works")) {
-if (window.matchMedia("(min-width: 767px)").matches) {
+  if (window.matchMedia("(min-width: 767px)").matches) {
 
 const elementsWorks = document.querySelectorAll(".item-work");
 const slidePicWorks = document.querySelector("#gallery-work");
@@ -359,14 +359,14 @@ elementsWorks.forEach((element, index) => {
     gsap.to(slidePicsWorks, {
       marginTop: `-${320 * index}px`,
       ease: "power2.in",
-      duration: .2, // Image in wrapper
+      duration: .5, // Image in wrapper
     });
   });
 
   element.addEventListener("mouseleave", function () {
     gsap.to(element, { 
       color: "initial", 
-      duration: .05, // Image fade out
+      duration: .2, // Image fade out
     });
   });
 });
@@ -377,33 +377,29 @@ window.addEventListener("mousemove", function (e) {
     left: `${e.clientX}px`,
     xPercent: -40,
     yPercent: -45,
-    duration: .1, // Main image wrap
+    duration: .5, // Main image wrap
   });
 });
 
-document
-  .querySelector(".items-works")
-  .addEventListener("mouseenter", function () {
+document.querySelector(".items-works").addEventListener("mouseenter", function () {
     gsap.to(slidePicWorks, {
       autoAlpha: 1,
-      duration: .05, // Image fade in
+      duration: .2, // Image fade in
     });
   });
 
-document
-  .querySelector(".items-works")
-  .addEventListener("mouseleave", function () {
+document.querySelector(".items-works").addEventListener("mouseleave", function () {
     gsap.to(slidePicWorks, {
       autoAlpha: 0,
-      duration: .05, // Image fade in
+      duration: .2, // Image fade in
     });
   });
 };
 };
 
    
-   // End animation
-   }
+// End animation
+}
    
    function addMenuClass() {
      MenuClass = document.querySelector("body");

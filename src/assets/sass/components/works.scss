@@ -2,8 +2,7 @@
   position: relative;
   visibility: hidden;
   opacity: 0;
-  animation: worksFadeIn forwards 1s;
-  animation-delay: 1s;
+  animation: .3s worksFadeIn .3s forwards;
   z-index: 9;
 }
 
@@ -36,7 +35,7 @@
   z-index: 999;
   overflow: hidden;
   pointer-events: none;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) .8s;
 }
 
 .works #work-images {
@@ -44,7 +43,7 @@
   height: calc(320px * 5);
   display: flex;
   flex-direction: column;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) .8s;
 }
 
 .works .work-image {
@@ -65,7 +64,7 @@
 }
 
 .works .item-work {
-  transition: 0.3s;
+  // transition: 0.2s;
   cursor: pointer;
   position: relative;
   z-index: 2;

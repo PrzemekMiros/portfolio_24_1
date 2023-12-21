@@ -16,6 +16,10 @@
     padding: .3em;
     background-color: var(--color-light-2);
   }
+  video {
+    aspect-ratio: 10/6;
+    object-fit: cover;
+  }
 @media(min-width:767px) {
     .hero-parallax-wrap {
       width: 115%;
