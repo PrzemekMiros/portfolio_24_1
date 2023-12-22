@@ -10,6 +10,6 @@ category:
   - Strona internetowa
 link: https://skup-anglikow.pl/
 thumbnail: /realizacje/img/angliki-thumb-big.jpg
-imageMain: /realizacje/img/angliki-img.jpg
+imageMain: /realizacje/img/angliki-thumb-big.jpg
 ---
 Strona www oparta na CMS Wordpress. Indywidualny projekt graficzny i optymalizacja pod wyszukiwarki

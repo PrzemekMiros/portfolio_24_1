@@ -5,7 +5,7 @@ description: Strona internetowa dla producenta konstrukcji stalowych. Indywidual
 date: 2022-02-08
 author: Przemek Miros
 thumbnail: /realizacje/img/staltom-thumb-big.jpg
-imageMain: /realizacje/img/staltom-img.jpg
+imageMain: /realizacje/img/staltom-thumb-big.jpg
 imageMobile: /realizacje/img/staltom-mobile.jpg
 imageGridOne: /realizacje/img/staltom-1.jpg
 imageGridTwo: /realizacje/img/staltom-2.jpg

@@ -11,7 +11,7 @@ category:
   - Strona internetowa
 link: https://przychodniagrabow.pl/
 thumbnail: /realizacje/img/przychodnia-thumb-big.jpg
-imageMain: /realizacje/img/przychodnia.jpg
+imageMain: /realizacje/img/przychodnia-thumb-big.jpg
 ---
 
 ## Przychodnia zdrowia

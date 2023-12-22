@@ -11,7 +11,7 @@ category:
   - Strona internetowa
 link: https://agencjacosmos.pl/
 thumbnail: /realizacje/img/cosmos-thumb-big.jpg
-imageMain: /realizacje/img/cosmos-img.jpg
+imageMain: /realizacje/img/cosmos-thumb-big.jpg
 ---
 
 ## Agencja aktorska

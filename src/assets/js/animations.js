@@ -358,7 +358,7 @@ elementsWorks.forEach((element, index) => {
   element.addEventListener("mouseenter", function () {
     gsap.to(slidePicsWorks, {
       marginTop: `-${320 * index}px`,
-      ease: "power2.in",
+      ease: "power2.out",
       duration: .5, // Image in wrapper
     });
   });
@@ -384,6 +384,7 @@ window.addEventListener("mousemove", function (e) {
 document.querySelector(".items-works").addEventListener("mouseenter", function () {
     gsap.to(slidePicWorks, {
       autoAlpha: 1,
+      scale: 1,
       duration: .2, // Image fade in
     });
   });
@@ -391,6 +392,7 @@ document.querySelector(".items-works").addEventListener("mouseenter", function (
 document.querySelector(".items-works").addEventListener("mouseleave", function () {
     gsap.to(slidePicWorks, {
       autoAlpha: 0,
+      scale: 0,
       duration: .2, // Image fade in
     });
   });

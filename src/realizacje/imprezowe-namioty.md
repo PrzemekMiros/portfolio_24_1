@@ -10,7 +10,7 @@ description: Strona internetowa dla firmy zajmującej się wynajmem namiotów i
 date: 2023-05-15
 link: https://imprezowe-namioty.pl/
 thumbnail: /realizacje/img/namioty-thumb-big.jpg
-imageMain: /realizacje/img/namioty-img.jpg
+imageMain: /realizacje/img/namioty-thumb-big.jpg
 imageMobile: /realizacje/img/longscroll-mobile.jpg
 category:
   - Strona internetowa

@@ -5,13 +5,12 @@ imageGridTwo: /realizacje/img/ecotech-2.jpg
 client: Eco Tech Group
 date: 2023-07-19
 thumbnail: /realizacje/img/ecotech-thumb-big.jpg
-imageMain: /realizacje/img/ecotech-img.jpg
+imageMain: /realizacje/img/ecotech-thumb-big.jpg
 title: Dystrybutor rur stalowych
 description: Wykonana według dostarczonego projektu graficznego. Oparta na
   systemie zarządzania treścią Wordpress. Katalog produktów z intuicyjna
   wyszukiwarką i filtrowaniem.
 link: https://ecotechgroup.pl/
-imageMobile: /realizacje/img/ecotech-mobile.jpg
 category:
   - Strona internetowa
 ---

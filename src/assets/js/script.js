@@ -53,10 +53,13 @@ if (document.querySelector('.swiper')) {
       768: {
         slidesPerView: 2
       },
-      1024: {
-        slidesPerView: 4
+      991: {
+        slidesPerView: 3
       },
-      1600: {
+      1024: {
+        slidesPerView: 3
+      },
+      1200: {
         slidesPerView: 4
       }
     }

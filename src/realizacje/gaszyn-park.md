@@ -5,7 +5,7 @@ description: Strona internetowa dla kameralnego osiedla w zabudowie bliźniaczej
 date: 2020-11-20
 author: Przemek Miros
 thumbnail: /realizacje/img/gaszyn-thumb-big.jpg
-imageMain: /realizacje/img/gaszyn-img.jpg
+imageMain: /realizacje/img/gaszyn-thumb-big.jpg
 imageMobile: /realizacje/img/gaszyn-mobile.jpg
 imageGridOne: /realizacje/img/gaszyn-1.jpg
 imageGridTwo: /realizacje/img/gaszyn-2.jpg

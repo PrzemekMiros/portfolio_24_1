@@ -10,19 +10,7 @@
     position:relative;
     position:fixed;
     text-rendering:optimizeLegibility;
-    opacity: 0;
-    animation: cookieFadeIn .3s linear forwards!important;
-    animation-delay: 3s!important;
     z-index:var(--cc-z-index)
-}
-
-@keyframes cookieFadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 #cc-main :after,#cc-main :before,#cc-main a,#cc-main button,#cc-main div,#cc-main h2,#cc-main input,#cc-main p,#cc-main span{

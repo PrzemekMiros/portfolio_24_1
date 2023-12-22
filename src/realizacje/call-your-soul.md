@@ -5,7 +5,7 @@ description: Profesjonalny salonem oferujący bezinwazyjny Japoński, liftinguj�
 date: 2023-02-20
 author: Przemek Miros
 thumbnail: /realizacje/img/soul-thumb-big.jpg
-imageMain: /realizacje/img/soul-img.jpg
+imageMain: /realizacje/img/soul-thumb-big.jpg
 imageMobile: /realizacje/img/soul-mobile.jpg
 imageGridOne: /realizacje/img/soul-1.jpg
 imageGridTwo: /realizacje/img/soul-2.jpg

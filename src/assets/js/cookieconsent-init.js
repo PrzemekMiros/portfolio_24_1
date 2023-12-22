@@ -1,5 +1,6 @@
 window.addEventListener("load", function () {
 CookieConsent.run({
+    page_scripts: true,
     guiOptions: {
         consentModal: {
             layout: "box wide",

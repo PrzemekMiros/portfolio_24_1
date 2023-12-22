@@ -5,7 +5,7 @@ description: Projekt graficzny i kodowanie - HTML, CSS, JS. Optymalizacja pod SE
 date: 2022-08-07
 author: Przemek
 thumbnail: /realizacje/img/bianca-thumb-big.jpg
-imageMain: /realizacje/img/bianca-img.jpg
+imageMain: /realizacje/img/bianca-thumb-big.jpg
 imageMobile: /realizacje/img/bianca-mobile.jpg
 imageGridOne: /realizacje/img/bianca-1.jpg
 imageGridTwo: /realizacje/img/bianca-2.jpg
