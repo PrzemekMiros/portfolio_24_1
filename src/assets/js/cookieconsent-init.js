@@ -3,9 +3,9 @@ CookieConsent.run({
     page_scripts: true,
     guiOptions: {
         consentModal: {
-            layout: "box wide",
-            position: "bottom right",
-            equalWeightButtons: true,
+            layout: "cloud",
+            position: "bottom center",
+            equalWeightButtons: false,
             flipButtons: false
         },
         preferencesModal: {
@@ -17,9 +17,12 @@ CookieConsent.run({
     },
     categories: {
         necessary: {
-            readOnly: true
+            enabled: true,  // this category is enabled by default
+            readOnly: true  // this category cannot be disabled
         },
-        analytics: {}
+        analytics: {
+            enabled: true
+        }
     },
     language: {
         default: "pl",
@@ -69,8 +72,7 @@ CookieConsent.run({
                     description: "Używamy plików cookie do personalizowania treści i reklam, udostępniania funkcji mediów społecznościowych i analizowania naszego ruchu. ",
                     acceptAllBtn: "Akceptuj",
                     acceptNecessaryBtn: "Odrzuć",
-                    showPreferencesBtn: "Ustawienia",
-                    footer: "<a href=\"/polityka/\">Polityka prywatności</a>\n<a href=\"/regulamin/\">Regulamin</a>"
+                    showPreferencesBtn: "Ustawienia"
                 },
                 preferencesModal: {
                     title: "Ustawienia plików cookies",
