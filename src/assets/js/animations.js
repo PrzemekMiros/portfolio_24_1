@@ -243,10 +243,10 @@ function animationMain() {
              },
            }); 
            tl.from(image, {
-             yPercent: -10,
+             yPercent: -6,
              ease: "none",
            }).to(image, {
-             yPercent: 10,
+             yPercent: 6,
              ease: "none",
            }); 
        });
