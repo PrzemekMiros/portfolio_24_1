@@ -2,12 +2,15 @@
     position: relative;
     background: var(--color-dark-1);
     background-size: cover;
-    background-position: center
+    background-position: center;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    overflow: hidden
 }
 
 .footer-parallax {
     position: relative
-}
+} 
 
 .footer-arrow {
   width: clamp(18px, 5vw, 22px);

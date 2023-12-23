@@ -191,9 +191,9 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
     color-scheme:dark
 }
 #cc-main .cm{
-    background:var(--color-light-1);;
+    background:var(--color-light-2);;
     border-radius:var(--cc-modal-border-radius);
-    box-shadow:0 .625em 1.875em rgba(0,0,2,.15);
+    border: 1px solid #74787b42;
     display:flex;
     flex-direction:column;
     max-width:24em;

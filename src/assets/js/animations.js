@@ -344,6 +344,30 @@ targetItems.forEach((targetItem) => {
 });
 };
 
+// Cursor gradient
+/*
+const cursor = document.querySelector('.bg-gradient');
+let mouseX = 0;
+let mouseY = 0;
+let cursorX = 0;
+let cursorY = 0;
+let speed = 0.05;
+function animate() {
+    let distX = mouseX - cursorX;
+    let distY = mouseY - cursorY;
+    cursorX = cursorX + (distX * speed);
+    cursorY = cursorY + (distY * speed);
+    cursor.style.left = cursorX + 'px';
+    cursor.style.top = cursorY + 'px';
+    requestAnimationFrame(animate);
+}
+animate();
+document.addEventListener('mousemove', (event) => {
+    mouseX = event.pageX;
+    mouseY = event.pageY;
+});
+*/
+
 // Reveal images parallax
 if (document.querySelector(".works")) {
   if (window.matchMedia("(min-width: 767px)").matches) {

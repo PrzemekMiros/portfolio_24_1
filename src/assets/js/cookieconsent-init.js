@@ -69,7 +69,7 @@ CookieConsent.run({
             pl: {
                 consentModal: {
                     title: "Ta strona używa plików cookies",
-                    description: "Używamy plików cookie do personalizowania treści i reklam, udostępniania funkcji mediów społecznościowych i analizowania naszego ruchu. ",
+                    description: "Używam plików cookie do personalizowania treści i reklam, udostępniania funkcji mediów społecznościowych i analizowania ruchu na stronie. ",
                     acceptAllBtn: "Akceptuj",
                     acceptNecessaryBtn: "Odrzuć",
                     showPreferencesBtn: "Ustawienia"
