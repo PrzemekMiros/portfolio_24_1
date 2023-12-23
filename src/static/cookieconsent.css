@@ -93,7 +93,7 @@
     direction:rtl
 }
 #cc-main .cm__title,#cc-main a,#cc-main b,#cc-main em,#cc-main strong{
-    font-weight:600
+    font-weight:500
 }
 #cc-main button>span{
     pointer-events:none
@@ -103,7 +103,7 @@
     background-position:0 100%;
     background-repeat:no-repeat;
     background-size:0 1px;
-    font-weight:600;
+    font-weight:500;
     color: var(--color-accent-1);
     position:relative;
     transition:background-size .25s,color .25s ease
@@ -315,7 +315,7 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
     border-radius: var(--cc-btn-border-radius);
     color: var(--color-light-1);
     font-size:.82em;
-    font-weight:600;
+    font-weight:500;
     min-height:42px;
     padding:.5em 1em;
     text-align:center
@@ -642,9 +642,9 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
     z-index:2
 }
 #cc-main .pm{
-    background:var(--color-light-1);
+    background:var(--color-light-2);
     border-radius:var(--cc-modal-border-radius);
-    box-shadow:0 .625em 1.875em rgba(0,0,2,.3);
+    box-shadow:0 .625em 1.875em rgba(0,0,2,.2);
     display:flex;
     flex-direction:column;
     opacity:0;
@@ -672,7 +672,7 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
     align-items:center;
     display:flex;
     flex:1;
-    font-weight:600;
+    font-weight:500;
     margin-right:2em;
     color: var(--color-heading);
 }
@@ -811,7 +811,7 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
 #cc-main .pm__section-title{
     border-radius:var(--cc-btn-border-radius);
     font-size:.95em;
-    font-weight:600;
+    font-weight:500;
     color: var(--color-heading);
 }
 #cc-main .pm__badge{
@@ -822,7 +822,7 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
     display:flex;
     flex:none;
     font-size:.8em;
-    font-weight:600;
+    font-weight:500;
     height:23px;
     justify-content:center;
     margin-left:1em;
@@ -1063,7 +1063,7 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
     color:var(--color-light-1);
     flex:auto;
     font-size:.82em;
-    font-weight:600;
+    font-weight:500;
     min-height:42px;
     min-width:110px;
     padding:.5em 1.5em;
@@ -1129,7 +1129,7 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
     color:var(--cc-primary-color);
     content:attr(data-column);
     flex:1;
-    font-weight:600;
+    font-weight:500;
     min-width:100px;
     overflow:hidden;
     padding-right:2em;
@@ -1302,7 +1302,7 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
         color:var(--cc-primary-color);
         content:attr(data-column);
         flex:1;
-        font-weight:600;
+        font-weight:500;
         min-width:100px;
         overflow:hidden;
         padding-right:2em;
