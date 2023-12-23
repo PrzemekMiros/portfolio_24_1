@@ -132,7 +132,7 @@
 }
 
 .main-menu li {
-  margin-bottom: 1.8em;
+  margin-bottom: 1.9em;
   width: 100%;
   overflow: hidden;
   transition: transform .3s ease-in-out 0s;
@@ -171,7 +171,7 @@
 }
 
 .nav-info-list {
-  margin-bottom: 38px
+  margin-bottom: 1.5rem
 }
 
 .nav-info-list li {
@@ -181,6 +181,10 @@
 .nav-info-list li a {
   font-size: 15px;
   font-weight: 300
+}
+
+.nav-info-social {
+  margin-bottom: .3em
 }
 
 .nav-info-social svg {

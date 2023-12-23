@@ -1,47 +1,44 @@
 .h-100vh {
     min-height: 100vh
 }
-
 .pt-xxlarge {
-    padding-top: 200px
+    padding-top: 12.5rem
 }
 .pt-xlarge {
-    padding-top: 150px
+    padding-top: 9.4rem
 }
 .pt-large {
-    padding-top: 120px
+    padding-top: 7.5rem
 }
 .pt-medium {
-    padding-top: 90px
+    padding-top: 5.75rem
 }
 .pt-small {
-    padding-top: 60px
+    padding-top: 3.75rem
 }
 .pt-xsmall {
-    padding-top: 30px
+    padding-top: 2.125rem
 }
 
 .pb-xlarge {
-    padding-bottom: 150px
+    padding-bottom: 9.4rem
 }
 .pb-large {
-    padding-bottom: 120px
+    padding-bottom: 7.5rem
 }
 .pb-medium {
-    padding-bottom: 90px
+    padding-bottom: 5.75rem
 }
 .pb-small {
-    padding-bottom: 60px
+    padding-bottom: 3.75rem
 }
 .pb-xsmall {
-    padding-bottom: 30px
+    padding-bottom: 2.125rem
 }
-
 .py-medium {
-    padding-top: 90px;
-    padding-bottom: 90px
+    padding-top: 5.75rem;
+    padding-bottom: 5.75rem
 }
-
 .pl-2 {
     padding-left: 2em
 }
@@ -60,24 +57,18 @@
 .pr-5 {
     padding-right: 5em
 }
-
 .mt-minus-medium {
-    margin-top: -90px
+    margin-top: -5.75rem
 }
 .mt-minus-large {
-    margin-top: -120px
-}
-.mb-minus-xlarge {
-    margin-bottom: -180px
+    margin-top: -7.5rem
 }
 .mb-minus-large {
-    margin-bottom: -120px
+    margin-bottom: -7.5rem
 }
-
 .trans-up-100 {
     transform: translateY(-100%)
 }
-
 .trans-down-100 {
     transform: translateY(100%)
 }
@@ -90,37 +81,37 @@
         padding: 0
     }
     .pt-md-xxlarge {
-        padding-top: 200px
+        padding-top: 12.5rem
     }
     .pt-md-xlarge {
-        padding-top: 150px
+        padding-top: 9.4rem
     }
     .pt-md-large {
-        padding-top: 120px
+        padding-top: 7.5rem
     }
     .pt-md-medium {
-        padding-top: 90px
+        padding-top: 5.75rem
     }
     .pt-md-small {
-        padding-top: 60px
+        padding-top: 3.75rem
     }
     .pt-md-xsmall {
-        padding-top: 30px
+        padding-top: 2.125rem
     }
     .pb-md-xlarge {
-        padding-bottom: 150px
+        padding-bottom: 9.4rem
     }
     .pb-md-large {
-        padding-bottom: 120px
+        padding-bottom: 7.5rem
     }
     .pb-md-medium {
-        padding-bottom: 90px
+        padding-bottom: 5.75rem
     }
     .pb-md-small {
-        padding-bottom: 60px
+        padding-bottom: 3.75rem
     }
     .pb-md-xsmall {
-        padding-bottom: 30px
+        padding-bottom: 2.125rem
     }
     .pl-md-5 {
         padding-left: 5em
@@ -150,7 +141,7 @@
 
 @media(min-width:1200px) {
     .pt-md-xsmall {
-        padding-top: 30px
+        padding-top: 2.125rem
     }
     .pl-xl-0 {
         padding-left: 0
