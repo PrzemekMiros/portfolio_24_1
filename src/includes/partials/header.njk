@@ -2,18 +2,6 @@
 <html lang="pl">
 
 <head>
-<!-- Hotjar Tracking Code for Portfolio -->
-<script data-cookiecategory="analytics">
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3601699,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="generator" content="Eleventy" />
@@ -46,68 +34,115 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
   <link rel="stylesheet" href="/static/cookieconsent.css" media="print" onload="this.media='all'">
-    
-  <style>
-    @font-face {
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: url('/assets/fonts/poppins-v20-latin-ext_latin-300.eot');
-      src: local(''),
-        url('/assets/fonts/poppins-v20-latin-ext_latin-300.eot?#iefix') format('embedded-opentype'),
-        url('/assets/fonts/poppins-v20-latin-ext_latin-300.woff2') format('woff2'),
-        url('/assets/fonts/poppins-v20-latin-ext_latin-300.woff') format('woff'),
-        url('/assets/fonts/poppins-v20-latin-ext_latin-300.ttf') format('truetype'),
-        url('/assets/fonts/poppins-v20-latin-ext_latin-300.svg#Poppins') format('svg');
-    }
-    @font-face {
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url('/assets/fonts/poppins-v20-latin-ext_latin-regular.eot');
-      src: local(''),
-        url('/assets/fonts/poppins-v20-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'),
-        url('/assets/fonts/poppins-v20-latin-ext_latin-regular.woff2') format('woff2'),
-        url('/assets/fonts/poppins-v20-latin-ext_latin-regular.woff') format('woff'),
-        url('/assets/fonts/poppins-v20-latin-ext_latin-regular.ttf') format('truetype'),
-        url('/assets/fonts/poppins-v20-latin-ext_latin-regular.svg#Poppins') format('svg');
-    }
-    @font-face {
-      font-display: swap;
-      font-family: 'Syne';
-      font-style: normal;
-      font-weight: 800;
-      src: url('/assets/fonts/syne-v15-latin_latin-ext-800.eot');
-      src: url('/assets/fonts/syne-v15-latin_latin-ext-800.eot?#iefix') format('embedded-opentype'),
-        url('/assets/fonts/syne-v15-latin_latin-ext-800.woff2') format('woff2'),
-        url('/assets/fonts/syne-v15-latin_latin-ext-800.woff') format('woff'),
-        url('/assets/fonts/syne-v15-latin_latin-ext-800.ttf') format('truetype'),
-        url('/assets/fonts/syne-v15-latin_latin-ext-800.svg#Syne') format('svg');
-    }
-@font-face {
-  font-display: swap; 
-  font-family: 'Hanken Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  src: url('/assets/fonts/hanken-grotesk-v8-latin_latin-ext-500.woff2') format('woff2'); 
-}
-@font-face {
-  font-display: swap;
-  font-family: 'Hanken Grotesk';
-  font-style: normal;
-  font-weight: 600;
-  src: url('/assets/fonts/hanken-grotesk-v8-latin_latin-ext-600.woff2') format('woff2'); 
-}
-@font-face {
-  font-display: swap; 
-  font-family: 'Hanken Grotesk';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/assets/fonts/hanken-grotesk-v8-latin_latin-ext-700.woff2') format('woff2'); 
-}
-</style>
+
+<style>
+  .preloader {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100vw;
+      height: 100vh;
+      background: var(--color-light-1);
+      transition: all 0.25s ease-out;
+  overflow: hidden;
+      pointer-events: none;
+      z-index: 10000000
+  }
+  .preloader_inner {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      z-index: 10000000
+  }
+  .scrollContainer {
+      opacity: 0;
+      transition: opacity 0.25s ease-out;
+  }
+  
+  .circle-loader {
+  position: relative;
+  width: auto;
+  height: auto;
+  }
+  
+  .circle-loader div {
+  height: 10px;
+  width: 10px;
+  background-color: var(--color-accent-1);
+  border-radius: 50%;
+  position: absolute;
+  -webkit-animation: 0.8s opaque ease-in-out infinite both;
+  animation: 0.8s opaque ease-in-out infinite both;
+  }
+  
+  .circle-loader div:nth-child(1) {
+  top: -25px;
+  left: 0px;
+  }
+  .circle-loader div:nth-child(2) {
+  top: -17px;
+  left: 17px;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  }
+  .circle-loader div:nth-child(3) {
+  top: 0;
+  left: 25px;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  }
+  .circle-loader div:nth-child(4) {
+  top: 17px;
+  left: 17px;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  }
+  .circle-loader div:nth-child(5) {
+  top: 25px;
+  left: 0px;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  }
+  .circle-loader div:nth-child(6) {
+  top: 17px;
+  left: -17px;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  }
+  .circle-loader div:nth-child(7) {
+  top: 0;
+  left: -23px;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  }
+  .circle-loader div:nth-child(8) {
+  top: -17px;
+  left: -17px;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+  }
+  
+  @keyframes opaque {
+  0% {
+  opacity: 0.1;
+  }
+  40% {
+  opacity: 1;
+  }
+  80% {
+  opacity: 0.1;
+  }
+  100% {
+  opacity: 0.1;
+  }
+  }
+
+  </style>
 
 </head>
 
@@ -129,114 +164,6 @@
         </div>
     </div>
 </div>
-<style>
-.preloader {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 100vw;
-    height: 100vh;
-    background: var(--color-light-1);
-    transition: all 0.25s ease-out;
-overflow: hidden;
-    pointer-events: none;
-    z-index: 10000000
-}
-.preloader_inner {
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    z-index: 10000000
-}
-.scrollContainer {
-    opacity: 0;
-    transition: opacity 0.25s ease-out;
-}
-
-.circle-loader {
-position: relative;
-width: auto;
-height: auto;
-}
-
-.circle-loader div {
-height: 10px;
-width: 10px;
-background-color: var(--color-accent-1);
-border-radius: 50%;
-position: absolute;
--webkit-animation: 0.8s opaque ease-in-out infinite both;
-animation: 0.8s opaque ease-in-out infinite both;
-}
-
-.circle-loader div:nth-child(1) {
-top: -25px;
-left: 0px;
-}
-.circle-loader div:nth-child(2) {
-top: -17px;
-left: 17px;
--webkit-animation-delay: 0.1s;
-animation-delay: 0.1s;
-}
-.circle-loader div:nth-child(3) {
-top: 0;
-left: 25px;
--webkit-animation-delay: 0.2s;
-animation-delay: 0.2s;
-}
-.circle-loader div:nth-child(4) {
-top: 17px;
-left: 17px;
--webkit-animation-delay: 0.3s;
-animation-delay: 0.3s;
-}
-.circle-loader div:nth-child(5) {
-top: 25px;
-left: 0px;
--webkit-animation-delay: 0.4s;
-animation-delay: 0.4s;
-}
-.circle-loader div:nth-child(6) {
-top: 17px;
-left: -17px;
--webkit-animation-delay: 0.5s;
-animation-delay: 0.5s;
-}
-.circle-loader div:nth-child(7) {
-top: 0;
-left: -23px;
--webkit-animation-delay: 0.6s;
-animation-delay: 0.6s;
-}
-.circle-loader div:nth-child(8) {
-top: -17px;
-left: -17px;
--webkit-animation-delay: 0.7s;
-animation-delay: 0.7s;
-}
-
-@keyframes opaque {
-0% {
-opacity: 0.1;
-}
-40% {
-opacity: 1;
-}
-80% {
-opacity: 0.1;
-}
-100% {
-opacity: 0.1;
-}
-}
-
-</style>
 
   <div class="scrollContainer" id="pinSection">
     <script>
@@ -291,16 +218,6 @@ opacity: 0.1;
         </div>
       </div>
     </header>
-
-    <section class="works reveal-img">
-        <div id="gallery-work" class="d-none d-md-block">
-          <div id="work-images">
-            {% for post in collections.works.slice(0, 5) %}
-              <div class="work-image" style="background-image: url('{{ post.data.thumbnail }}');"></div>
-            {% endfor %}
-          </div>
-        </div>
-    </section>
 
     <div id="swup" class="transition-blur">
       <div class="sticky" data-scroll-sticky data-scroll-target="#pinSection">

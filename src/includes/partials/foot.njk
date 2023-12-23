@@ -1,4 +1,13 @@
 </div>
+<section class="works reveal-img">
+  <div id="gallery-work" class="d-none d-md-block">
+    <div id="work-images">
+      {% for post in collections.works.slice(0, 5) %}
+        <div class="work-image" style="background-image: url('{{ post.data.thumbnail }}');"></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 </div>
 <!-- Scripts -->
 <script src="/assets/js/vendor.js"></script>
@@ -40,6 +49,17 @@ window.addEventListener('load', function(){
 
 <script src="/assets/js/cookieconsent.js" defer></script>
 <script src="/assets/js/cookieconsent-init.js" defer></script>
+<!-- Hotjar Tracking Code for Portfolio -->
+<script data-cookiecategory="analytics" defer>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3601699,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 
 <script type="application/ld+json">
   {

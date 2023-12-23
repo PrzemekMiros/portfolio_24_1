@@ -1,7 +1,60 @@
-:root {
-  --font-primary: "Hanken Grotesk";
-  --font-secondary: "Poppins";
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/poppins-v20-latin_latin-ext-300.woff2') format('woff2'); 
 }
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/poppins-v20-latin_latin-ext-regular.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/fonts/poppins-v20-latin_latin-ext-500.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Telegraf';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/PPTelegraf-UltraLight.otf'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Telegraf';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/PPTelegraf-Regular.otf'); 
+}
+/*
+@font-face {
+  font-display: swap; 
+  font-family: 'Telegraf';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/fonts/PPTelegraf-UltraBold.otf'); 
+}
+*/
+:root {
+  --font-primary: "Poppins";
+  --font-secondary: "Telegraf";
+}
+
+.xxxl, .xxl, .xl, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: var(--font-secondary)
+} 
 
 .xxxl {
   margin-bottom: .5em;
@@ -119,7 +172,7 @@ blockquote p {
 }
 
 .bold {
-  font-weight: 600
+  font-weight: 500
 }
 
 .capitalize {
