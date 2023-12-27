@@ -69,22 +69,20 @@ CookieConsent.run({
             pl: {
                 consentModal: {
                     title: "Ta strona używa plików cookies",
-                    description: "Używam plików cookie do personalizowania treści i reklam, udostępniania funkcji mediów społecznościowych i analizowania ruchu na stronie. ",
+                    description: "Używam plików cookie do analizowania ruchu na stronie. Możesz wyłączyć skrypty śledzące w ustawieniach",
                     acceptAllBtn: "Akceptuj",
-                    acceptNecessaryBtn: "Odrzuć",
                     showPreferencesBtn: "Ustawienia"
                 },
                 preferencesModal: {
                     title: "Ustawienia plików cookies",
                     acceptAllBtn: "Akceptuj",
-                    acceptNecessaryBtn: "Odrzuć",
                     savePreferencesBtn: "Zapisz ustawienia",
                     closeIconLabel: "Zamknij",
                     serviceCounterLabel: "Service|Services",
                     sections: [
                         {
                             title: "Wykorzystanie plików cookie",
-                            description: "Ponieważ szanujemy Twoje prawo do prywatności, możesz nie zezwalać na niektóre rodzaje plików cookie. Kliknij nagłówki różnych kategorii, aby dowiedzieć się więcej i zmienić domyślne ustawienia."
+                            description: "Ponieważ szanuje Twoje prawo do prywatności, możesz nie zezwalać na niektóre rodzaje plików cookie. Kliknij nagłówki kategorii, żeby zmienić domyślne ustawienia."
                         },
                         {
                             title: "Niezbędne pliki cookie<span class=\"pm__badge\">Zawsze aktywne</span>",
