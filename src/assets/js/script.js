@@ -25,7 +25,7 @@ if (document.querySelector('.swiper')) {
   var swiper = new Swiper(".swiper", {
     grabCursor: true,
     spaceBetween: 20,
-    lazy: true,
+    lazyPreloadPrevNext: 1,
     centeredSlides: false,
     loop: true,
     pagination: {
