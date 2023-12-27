@@ -16,6 +16,16 @@
   margin-right: auto;
   margin-left: auto;
 }
+@media (min-width: 767px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+}
 @media (min-width: 1200px) {
   .container,
   .container-lg,
@@ -23,6 +33,8 @@
   .container-sm,
   .container-xl {
     max-width: 1180px;
+    padding-left: 8em;
+    padding-right: 8em;
   }
 }
 @media (min-width: 1400px) {
