@@ -191,7 +191,7 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
     color-scheme:dark
 }
 #cc-main .cm{
-    background:var(--color-light-2);;
+    background:var(--color-light-1);;
     border-radius:var(--cc-modal-border-radius);
     border: 1px solid #74787b42;
     display:flex;
