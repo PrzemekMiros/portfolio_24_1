@@ -36,8 +36,13 @@
 
 .light .client-card img {
   transition: var(--easing-1);
-  // filter: grayscale(99%);
-  // opacity: .65
+  -webkit-filter: invert(0) grayscale(0%);
+  filter: invert(0) grayscale(0%);
+}
+.light .client-card:hover img {
+  transition: var(--easing-1);
+  -webkit-filter: invert(1) grayscale(100%);
+  filter: invert(1) grayscale(100%);
 }
 
 .dark .client-card img {

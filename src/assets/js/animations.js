@@ -405,6 +405,7 @@ window.addEventListener("mousemove", function (e) {
   });
 });
 
+if (document.querySelector(".items-works")) {
 document.querySelector(".items-works").addEventListener("mouseenter", function () {
     gsap.to(slidePicWorks, {
       autoAlpha: 1,
@@ -420,6 +421,8 @@ document.querySelector(".items-works").addEventListener("mouseleave", function (
       duration: .2, // Image fade in
     });
   });
+};
+
 };
 };
 

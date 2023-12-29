@@ -85,27 +85,20 @@ module.exports = function(eleventyConfig) {
         });
   
   
-        eleventyConfig.addNunjucksAsyncShortcode('thumbImage', async (src, alt, type) => {
+        eleventyConfig.addNunjucksAsyncShortcode('blogImage', async (src, alt) => {
           if (!alt) {
             throw new Error(`Missing \`alt\` on myImage from: ${src}`);
           }
-        
-          let outputDir = '';
-          if (type === 'realizacje') {
-            outputDir = './public/realizacje/img/';
-          } else if (type === 'blog') {
-            outputDir = './public/blog/img/';
-          }
-        
+      
           let stats = await Image(src, {
-            widths: [25, 320, 640, 960],
+            widths: [25, 320, 640, 960, 1200, 1800, 2400],
             formats: ['jpeg', 'webp'],
-            urlPath: `/${type}/img/`, // Assuming the input images are located in /realizacje/img/ or /blog/img/
-            outputDir: outputDir,
+            urlPath: '/blog/img/',
+            outputDir: './public/blog/img/',
           });
-        
+      
           let lowestSrc = stats['jpeg'][0];
-        
+      
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
               ...acc,
@@ -116,9 +109,9 @@ module.exports = function(eleventyConfig) {
             }),
             {},
           );
-        
+      
           const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
-        
+      
           const img = `<img
             loading="lazy"
             alt="${alt}"
@@ -127,9 +120,55 @@ module.exports = function(eleventyConfig) {
             srcset="${srcset['jpeg']}"
             width="${lowestSrc.width}"
             height="${lowestSrc.height}">`;
-        
+      
           return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
+  
+
+        eleventyConfig.addNunjucksAsyncShortcode('workImage', async (src, alt) => {
+          if (!alt) {
+            throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+          }
+      
+          let stats = await Image(src, {
+            widths: [25, 320, 640, 960, 1200, 1800, 2400],
+            formats: ['jpeg', 'webp'],
+            urlPath: '/realizacje/img/',
+            outputDir: './public/realizacje/img/',
+          });
+      
+          let lowestSrc = stats['jpeg'][0];
+          let blurUpSrc = stats['jpeg'][1];
+      
+          const srcset = Object.keys(stats).reduce(
+            (acc, format) => ({
+              ...acc,
+              [format]: stats[format].reduce(
+                (_acc, curr) => `${_acc} ${curr.srcset} ,`,
+                '',
+              ),
+            }),
+            {},
+          ); 
+      
+          const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
+      
+          const img = `<img
+            loading="lazy"
+            alt="${alt}"
+            src="${lowestSrc.url}"
+            data-src="${lowestSrc.url}" 
+            data-srcset="${srcset['jpeg']}" 
+            sizes='(min-width: 1024px) 1024px, 100vw'
+            srcset="${srcset['jpeg']}"
+            width="${lowestSrc.width}"
+            height="${lowestSrc.height}"
+            style="background-image: url('${blurUpSrc.url}'); background-size: cover;" 
+            >`;
+      
+          return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
+        });
+  
         
 
       // Code blocks
