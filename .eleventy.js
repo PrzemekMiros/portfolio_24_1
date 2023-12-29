@@ -163,7 +163,7 @@ module.exports = function(eleventyConfig) {
             srcset="${srcset['jpeg']}"
             width="${lowestSrc.width}"
             height="${lowestSrc.height}"
-            style="background-image: url('${blurUpSrc.url}'); background-size: cover;" 
+            style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-size: cover;"  
             >`;
       
           return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;

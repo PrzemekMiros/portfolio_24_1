@@ -19,8 +19,26 @@ body {
   video {
     display: block;
     width: 100%;
-    height: auto
+    height: auto;
+    background-size: cover;
+    background-position: center;
   }
+
+  .image-wrapper {
+    display: block;
+    width: 100%;
+    height: auto; /* Dostosuj wysokość w zależności od proporcji obrazka */
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    transition: opacity 0.3s ease-in-out
+}
+
+.image-wrapper img[data-src] {
+    opacity: 1;
+    filter: blur(0); 
+}
 
   a {
     text-decoration: none;
