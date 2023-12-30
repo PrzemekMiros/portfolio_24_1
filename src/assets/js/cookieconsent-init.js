@@ -14,7 +14,7 @@ CookieConsent.run({
             equalWeightButtons: true,
             flipButtons: false
         }
-    },
+    },  
     categories: {
         necessary: {
             enabled: true, 
