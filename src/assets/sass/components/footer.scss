@@ -42,7 +42,7 @@
 }
 
 .footer-card li {
-  font-size: 14px;
+  font-size: 17px;
   color: var(--color-light-1)
 }
 
@@ -97,6 +97,9 @@
   .menu-item__text {
     display: block
   } 
+  .footer-card li {
+    font-size: 14px
+  }
 }
 
 @media(max-width:768px) {
