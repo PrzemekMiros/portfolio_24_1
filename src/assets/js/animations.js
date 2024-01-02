@@ -98,17 +98,19 @@ function animationMain() {
    // Footer parallax
    if (window.matchMedia("(min-width: 767px)").matches) {
      gsap.from(".footer-parallax", {
-       y: "-35%",
+       opacity: 0,
+       y: "-25%",
        scrollTrigger: {
          scroller: ".scrollContainer",
          trigger: ".site-footer",
          start: "top 95%",
-         end: "bottom 90%",
+         end: "bottom 80%", 
          scrub: true
        }
      });
      } else {
        gsap.from(".footer-parallax", {
+         opacity: 0,
          y: "-15%",
          scrollTrigger: {
            scroller: ".scrollContainer",
@@ -118,13 +120,35 @@ function animationMain() {
            scrub: true
          }
        });
-     };
+     }; 
+
+     if (window.matchMedia("(min-width: 767px)").matches) {
+     const paths = [...document.querySelectorAll('path.path-anim')];
+
+     paths.forEach(el => {
+     const svgEl = el.closest('.separator');
+     const pathTo = el.dataset.pathTo;
+   
+     gsap.timeline({
+         scrollTrigger: {
+             trigger: svgEl,
+             start: "top bottom",
+             end: "bottom 40%",
+             scrub: true
+         }
+     })
+     .to(el, {
+         ease: 'none',
+         attr: { d: pathTo }
+     });
+     });
+    };
+   
    
    // Magnetic
    if(document.querySelector('.magnetic')) {
      var magnets = document.querySelectorAll('.magnetic');
      var magnetText = document.querySelectorAll(".btn-text");
-     gsap.set(".magnetic", {display: "inline-block"})
      if(window.innerWidth > 767){
        // Mouse Reset
        magnets.forEach( (magnet) => {
@@ -279,70 +303,6 @@ function animationMain() {
      }
    });
    };
-
-// Hover links
-if (window.matchMedia("(min-width: 767px)").matches) {
-const createElm = function (menuItem) {
-  let menuItemsTexts = menuItem.children[0].children[0];
-
-  const menuItemsTextsArray = [...menuItemsTexts.textContent];
-
-  menuItemsTexts.textContent = "";
-
-  const textsArray = [];
-
-  menuItemsTextsArray.forEach((menuItemText) => {
-    textsArray.push(`<span>${menuItemText}</span>`);
-  });
-
-  textsArray.forEach((textArray) => {
-    menuItemsTexts.innerHTML += textArray;
-  });
-
-  const parentElm = menuItemsTexts.parentElement;
-
-  const parentElmHeight = parentElm.clientHeight;
-  parentElm.style.height = `${parentElmHeight}px`;
-
-  const cloneItem = menuItemsTexts.cloneNode(true);
-  parentElm.appendChild(cloneItem);
-};
-
-const animation = function (menuItem) {
-  gsap.defaults({
-    ease: "power1",
-    stagger: {
-      amount: 0.14,
-      from: "start",
-    },
-  });
-  menuItem.addEventListener("mouseover", function () {
-    gsap.to(this.children[0].children[0].children, {
-      y: "-100%",
-    });
-    gsap.to(this.children[0].children[1].children, {
-      y: "-100%",
-    });
-  });
-
-  menuItem.addEventListener("mouseleave", function () {
-    gsap.to(this.children[0].children[0].children, {
-      y: "0",
-    });
-    gsap.to(this.children[0].children[1].children, {
-      y: "0",
-    });
-  });
-};
-
-const targetItems = document.querySelectorAll(".js-link-item");
-
-targetItems.forEach((targetItem) => {
-  const menuItem = targetItem;
-  createElm(menuItem);
-  animation(menuItem);
-});
-};
 
 // Cursor gradient
 /*

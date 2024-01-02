@@ -1,9 +1,9 @@
 {% include "partials/header.njk" %}
 
-<section class="pt-large pt-md-xlarge pb-small" data-scroll-section>
+<section class="pt-large pt-md-large pb-small" data-scroll-section>
     <div class="container">
 
-            <div class="offset-md-2 col-md-8">
+            <div class="offset-md-3 col-md-6">
                 <div class="single-post-title-wrap pb-xsmall pb-md-small">
                     <div class="breacrumbs fadeIn">
                         <a href="/" title="Strona główna">
@@ -45,12 +45,14 @@
                 </div>
             </div>
 
+            <div class="offset-md-1 col-md-10">
                 <div class="parallax-wrap aspect_16-9 fadeIn mb-4 mb-lg-5">
                      {% blogImage "public" + thumbnail, title, "single-post-image img-fluid" %}
                 </div>
+            </div>
 
         <div class="content row gx-5 fadeIn" id="pinShare">
-            <div class="offset-md-2 col-md-7">
+            <div class="offset-md-3 col-md-6">
                 {{ content | safe}}
             </div>
         </div>
@@ -75,7 +77,7 @@
                                 </small>
                             </p>
                             <a href="{{ previousPost.url | url }}" title="{{ previousPost.data.client }}"
-                                class="h4">{{ previousPost.data.title }}</a>
+                                class="h2">{{ previousPost.data.title }}</a>
                             <div class="hover-reveal">
                                 <img src="{{ previousPost.data.thumbnail }}" class="hidden-img">
                             </div>
@@ -89,7 +91,7 @@
                                 </small>
                             </p>
                             <a href="{{ nextPost.url | url }}" title="{{ nextPost.data.client }}"
-                                class="h4">{{ nextPost.data.title }}</a>
+                                class="h2">{{ nextPost.data.title }}</a>
                             <div class="hover-reveal">
                                 <img src="{{ nextPost.data.thumbnail }}" class="hidden-img">
                             </div>
