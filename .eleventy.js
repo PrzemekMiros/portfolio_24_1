@@ -22,7 +22,7 @@ module.exports = function(eleventyConfig) {
     
         // Collections blog
         eleventyConfig.addCollection('posts', function(collectionApi) {
-        return collectionApi.getFilteredByGlob('src/blog/**/*.md').reverse();
+        return collectionApi.getFilteredByGlob('src/content/blog/**/*.md').reverse();
         });
     
         // Collections portfolio
@@ -32,17 +32,22 @@ module.exports = function(eleventyConfig) {
 
         // Collections services
         eleventyConfig.addCollection('services', function(collectionApi) {
-        return collectionApi.getFilteredByGlob('src/uslugi/**/*.md').reverse();
+        return collectionApi.getFilteredByGlob('src/content/uslugi/**/*.md').reverse();
+        });
+
+        // Collections products
+        eleventyConfig.addCollection('products', function(collectionApi) {
+        return collectionApi.getFilteredByGlob('src/content/produkty/**/*.md').reverse();
         });
 
         // Collection faq
         eleventyConfig.addCollection("faq", function(collectionApi) {
-        return collectionApi.getFilteredByGlob('src/faq/**/*.md');
+        return collectionApi.getFilteredByGlob('src/content/faq/**/*.md');
         });
 
         // Collections towns
         // eleventyConfig.addCollection('towns', function(collectionApi) {
-        // return collectionApi.getFilteredByGlob('src/miasta/**/*.md').reverse();
+        // return collectionApi.getFilteredByGlob('src/content/miasta/**/*.md').reverse();
         // });
 
         eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt) => {

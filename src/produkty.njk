@@ -1,0 +1,55 @@
+---
+layout: layouts/works.njk
+title: Produkty
+description: Opis
+---
+
+<div class="row gx-0">
+    <div class="offset-md-1 col-md-10">
+        <h1 class="xxl split-text-lines">
+            {{ title }}<span class="dot">.</span>
+        </h1>
+        <div class="line-x lx-2"></div>
+    </div>
+</div>
+
+{% set counter = 1 %}
+{% for post in collections.products %}
+    <div class="service-item">
+        <div class="row gx-0 pt-large pb-medium fadeIn">
+            <div class="offset-md-1 col-md-1">
+                <p class="service-number mt-1">0{{ counter }}</p>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ post.url }}" title="{{ post.data.title }}">
+                   <img src="{{ post.data.thumbnail | url }}" alt=""> 
+               </a>
+            </div>
+            <div class="offset-md-1 col-md-4">
+                <h3 class="mt-0">{{ post.data.title }}</h3>
+                <p class="mt-0">
+                    {{ post.data.description }}
+                </p>
+                <button class="snipcart-add-item"
+                    data-item-id="{{ counter }}"
+                    data-item-price="79.99"
+                    data-item-description="{{ post.data.description }}"
+                    data-item-image="{{ post.data.thumbnail | url }}"
+                    data-item-name="{{ post.data.title }}">
+                        Kup teraz
+                </button>
+            </div>
+            <div class="col-md-1 text-md-end">
+                <p class="service-arrow h2 my-0">+</p>
+            </div>
+        </div> 
+        <div class="row gx-0">
+            <div class="offset-md-1 col-md-10">
+                <div class="line-x lx-op"></div>
+            </div>
+        </div>
+    </div>
+{% set counter = counter + 1 %}
+{% endfor %}
+
+
