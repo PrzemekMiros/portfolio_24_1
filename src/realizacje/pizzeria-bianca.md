@@ -6,7 +6,7 @@ client: Pizzeria Bianca
 title: Pizzeria włoska z dostawą
 description: Projekt graficzny i kodowanie - HTML, CSS, JS. Optymalizacja pod
   SEO i pozycjonowanie. System zamówień jedzenia online i zaawansowane narzędzia
-  analityczne. 2
+  analityczne.
 date: 2022-08-07
 link: https://pizzeriabianca.pl/
 thumbnail: /realizacje/img/bianca-thumb-big.jpg
