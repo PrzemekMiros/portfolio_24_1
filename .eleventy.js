@@ -81,10 +81,14 @@ module.exports = function(eleventyConfig) {
             loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
+            data-src="${lowestSrc.url}" 
+            data-srcset="${srcset['jpeg']}" 
             sizes='(min-width: 1024px) 1024px, 100vw'
             srcset="${srcset['jpeg']}"
             width="${lowestSrc.width}"
-            height="${lowestSrc.height}">`;
+            height="${lowestSrc.height}"
+            style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-size: cover;"  
+            >`;
       
           return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
@@ -121,10 +125,14 @@ module.exports = function(eleventyConfig) {
             loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
+            data-src="${lowestSrc.url}" 
+            data-srcset="${srcset['jpeg']}" 
             sizes='(min-width: 1024px) 1024px, 100vw'
             srcset="${srcset['jpeg']}"
             width="${lowestSrc.width}"
-            height="${lowestSrc.height}">`;
+            height="${lowestSrc.height}"
+            style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-size: cover;"  
+            >`;
       
           return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
