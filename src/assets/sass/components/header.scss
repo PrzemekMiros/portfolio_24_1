@@ -6,7 +6,7 @@
   width: 100vw;
   transform: translateY(0);
   transition: .4s ease-in-out;
-  z-index: 999
+  z-index: 20
 }
 
 .site-header.scrolled {
@@ -246,4 +246,19 @@
   .main-menu li a {
       font-size: 35px
   }
+}
+
+
+
+.snipcart-test-banner {
+  border-top: 4px solid #ff6435!important;
+}
+
+.snipcart-test-banner__message {
+  background-color: #ff6435!important;
+  color: #fff;
+}
+
+.snipcart-button-primary {
+  background-color: #ff6435!important;
 }

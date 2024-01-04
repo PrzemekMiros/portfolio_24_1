@@ -1,7 +1,9 @@
 ---
 title: Produkt 2
-description: Tworzę atrakcyjne strony internetowe w przystepnych cenach dla firm z Białegostoku. Zadzwoń do mnie +48 788 660 190
+description: Want to see how your site will perform before you deploy? Install the Lighthouse plugin for build-time Lighthouse scores and reports.
 date: 2022-07-15
+product_id: 2
+product_price: 45
 thumbnail: /assets/img/services/pozycjonowanie.jpg
 ---
 

@@ -30,13 +30,17 @@ description: Opis
                 <p class="mt-0">
                     {{ post.data.description }}
                 </p>
-                <button class="snipcart-add-item"
-                    data-item-id="{{ counter }}"
-                    data-item-price="79.99"
+                <button title="Zobacz więcej" class="button magnetic snipcart-add-item fadeIn mt-0 mb-2" data-strength="100" data-strength-text="50"
+                    data-item-id="{{ post.data.product_id }}"
+                    data-item-price="{{ post.data.product_price }}"
                     data-item-description="{{ post.data.description }}"
                     data-item-image="{{ post.data.thumbnail | url }}"
-                    data-item-name="{{ post.data.title }}">
-                        Kup teraz
+                    data-item-name="{{ post.data.title }}"> 
+                        <span>Kup teraz</span>
+                        <svg width="11" height="11" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 1L1 13" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3 1H13V11" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
                 </button>
             </div>
             <div class="col-md-1 text-md-end">
