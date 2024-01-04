@@ -4,11 +4,11 @@ title: Studio masażu i terapii
 description: Profesjonalny salonem oferujący bezinwazyjny Japoński, liftingujący masaż, sesje dźwiękowe przy użyciu mis, spotkania z coachami i psychologami. 
 date: 2023-02-20
 author: Przemek Miros
-thumbnail: /realizacje/img/soul-thumb-big.jpg
-imageMain: /realizacje/img/soul-thumb-big.jpg
-imageMobile: /realizacje/img/soul-mobile.jpg
-imageGridOne: /realizacje/img/soul-1.jpg
-imageGridTwo: /realizacje/img/soul-2.jpg
+thumbnail: /content/realizacje/img/soul-thumb-big.jpg
+imageMain: /content/realizacje/img/soul-thumb-big.jpg
+imageMobile: /content/realizacje/img/soul-mobile.jpg
+imageGridOne: /content/realizacje/img/soul-1.jpg
+imageGridTwo: /content/realizacje/img/soul-2.jpg
 category: ['Strona internetowa']
 link: https://callyoursoul.pl/
 ---

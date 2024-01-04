@@ -9,7 +9,7 @@ author: Przemek Miros
 date: 2022-03-30T13:46:55.956Z
 tags:
   - marketing
-thumbnail: /blog/img/zarabianie-przez-internet.jpg
+thumbnail: /content/blog/img/zarabianie-przez-internet.jpg
 ---
 W dzisiejszych czasach coraz więcej osób zastanawia się nad tym, jak zarabiać pieniądze w internecie. To naturalne, ponieważ internet oferuje wiele możliwości zarobkowych, nie wymagając jednocześnie specjalnych umiejętności czy doświadczenia. W tym artykule przedstawimy kilka sposobów na zarabianie w internecie oraz porad, jak zacząć swoją przygodę z tym tematem.
 

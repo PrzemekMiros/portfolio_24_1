@@ -7,8 +7,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/css");
     eleventyConfig.addPassthroughCopy("src/assets/js");
     eleventyConfig.addPassthroughCopy("src/assets/img"); 
-    eleventyConfig.addPassthroughCopy("src/blog/img");
-    eleventyConfig.addPassthroughCopy("src/realizacje/img");
+    eleventyConfig.addPassthroughCopy("src/content/blog/img");
+    eleventyConfig.addPassthroughCopy("src/content/realizacje/img");
     eleventyConfig.addPassthroughCopy("src/assets/fonts");
     eleventyConfig.addPassthroughCopy("src/static");
     eleventyConfig.addPassthroughCopy("src/admin");
@@ -27,7 +27,7 @@ module.exports = function(eleventyConfig) {
     
         // Collections portfolio
         eleventyConfig.addCollection('works', function(collectionApi) {
-        return collectionApi.getFilteredByGlob('src/realizacje/**/*.md').reverse();
+        return collectionApi.getFilteredByGlob('src/content/realizacje/**/*.md').reverse();
         });
 
         // Collections services
@@ -98,8 +98,8 @@ module.exports = function(eleventyConfig) {
           let stats = await Image(src, {
             widths: [25, 320, 640, 960, 1200, 1800, 2400],
             formats: ['jpeg', 'webp'],
-            urlPath: '/blog/img/',
-            outputDir: './public/blog/img/',
+            urlPath: '/content/blog/img/',
+            outputDir: './public/content/blog/img/',
           });
       
           let lowestSrc = stats['jpeg'][0];

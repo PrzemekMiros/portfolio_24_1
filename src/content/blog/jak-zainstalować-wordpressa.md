@@ -5,7 +5,7 @@ author: Przemek Miros
 date: 2022-12-08T19:34:41.039Z
 tags:
   - wordpress
-thumbnail: /blog/img/wordpress-kurs-instalacja.jpg
+thumbnail: /content/blog/img/wordpress-kurs-instalacja.jpg
 ---
 W tym artykule opiszę jak ręcznie zainstalować Wordpressa. Będziesz potrzebował klienta ftp (żeby przesłać pliki Wordpressa). Zacznij od pobrania ostatniej wersji z oficjalnej strony <https://wordpress.org/download/>  Następnie wypakuj pliki i prześlij je (przez klienta ftp, np Filezilla) do katalogu na serwerze w którym będą przechowywane pliki strony. Teraz przejdź do phpMyadmin z panelu operatora hostingu. Utwórz nową bazę danych dla Wordpressa. 
 

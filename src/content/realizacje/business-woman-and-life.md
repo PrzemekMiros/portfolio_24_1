@@ -2,10 +2,10 @@
 author: Przemek
 client: Business Woman
 date: 2023-08-03T20:19:43.571Z
-thumbnail: /realizacje/img/business-thumb-big.jpg
-imageMain: /realizacje/img/business-thumb-big.jpg
-imageGridOne: /realizacje/img/longscroll-1.jpg
-imageGridTwo: /realizacje/img/longscroll-2.jpg
+thumbnail: /content/realizacje/img/business-thumb-big.jpg
+imageMain: /content/realizacje/img/business-thumb-big.jpg
+imageGridOne: /content/realizacje/img/longscroll-1.jpg
+imageGridTwo: /content/realizacje/img/longscroll-2.jpg
 title: Portal kobiet biznesu
 description: Serwis dla czasopisma Business Woman and Life. Indywidualny projekt graficzny i dedykowany motyw na Wordpressa.
 link: https://businesswomanlife.pl/

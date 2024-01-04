@@ -5,7 +5,7 @@ author: Przemek
 date: 2023-08-15
 tags:
   - strony www
-thumbnail: /blog/img/blog-responsive.jpg
+thumbnail: /content/blog/img/blog-responsive.jpg
 ---
 **Niektóre firmy nadal nie posiadają witryny przyjaznej dla urządzeń mobilnych,** ponieważ brakuje im zasobów lub nie widzą z tego korzyści.  W 2007 roku istniało około 1 mln witryn mobilnych, a do 2024 iczba ta ma osiągnąć 500 mln. Widać wyraźnie, że w nadchodzących latach liczba stron przyjaznych dla urządzeń mobilnych będzie szybko rosła. Twoi klienci coraz częściej będą z nich korzystać.
 

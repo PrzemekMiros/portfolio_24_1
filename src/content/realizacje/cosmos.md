@@ -10,8 +10,8 @@ date: 2023-03-12T06:55:17.673Z
 category:
   - Strona internetowa
 link: https://agencjacosmos.pl/
-thumbnail: /realizacje/img/cosmos-thumb-big.jpg
-imageMain: /realizacje/img/cosmos-thumb-big.jpg
+thumbnail: /content/realizacje/img/cosmos-thumb-big.jpg
+imageMain: /content/realizacje/img/cosmos-thumb-big.jpg
 ---
 
 ## Agencja aktorska

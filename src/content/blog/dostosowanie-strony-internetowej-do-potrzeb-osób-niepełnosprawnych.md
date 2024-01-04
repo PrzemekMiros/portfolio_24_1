@@ -9,7 +9,7 @@ author: Przemek Miros
 date: 2023-03-24T17:32:24.313Z
 tags:
   - strony www
-thumbnail: /blog/img/wcag.jpg
+thumbnail: /content/blog/img/wcag.jpg
 ---
 Dostosowanie strony internetowej do potrzeb osób niepełnosprawnych jest ważnym aspektem tworzenia stron. Jest to proces, który pozwala na zapewnienie dostępu do treści i funkcjonalności strony dla osób z różnymi rodzajami niepełnosprawności, takich jak problemy z widzeniem, słuchem, ruchem lub poznawcze. 
 

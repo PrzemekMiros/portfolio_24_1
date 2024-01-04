@@ -11,8 +11,8 @@ date: 2023-05-03T13:42:19.166Z
 category:
   - sklep internetowy
 link: https://moneso.pl/
-thumbnail: /realizacje/img/moneso-thumb-big.jpg
-imageMain: /realizacje/img/moneso-thumb-big.jpg
+thumbnail: /content/realizacje/img/moneso-thumb-big.jpg
+imageMain: /content/realizacje/img/moneso-thumb-big.jpg
 ---
 
 ## Meble z litego drewna

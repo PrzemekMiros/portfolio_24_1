@@ -6,7 +6,7 @@ author: Przemek
 date: 2023-05-22T18:47:03.304Z
 tags:
   - marketing
-thumbnail: /blog/img/blog-instagrfam.jpg
+thumbnail: /content/blog/img/blog-instagrfam.jpg
 ---
 Aby usunąć konto na Instagramie, możesz postępować zgodnie z poniższymi krokami:
 

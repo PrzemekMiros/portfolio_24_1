@@ -5,6 +5,4 @@ date: 2022-07-15
 thumbnail: /assets/img/services/pozycjonowanie.jpg
 ---
 
-## Opis produktu
-
-Opis produktu
+Want to see how your site will perform before you deploy? Install the Lighthouse plugin for build-time Lighthouse scores and reports.

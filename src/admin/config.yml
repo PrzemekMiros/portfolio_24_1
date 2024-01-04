@@ -10,9 +10,9 @@ publish_mode: editorial_workflow
 collections:
   - name: "posts"
     label: "Blog" 
-    folder: "src/blog"
+    folder: "src/content/blog"
     media_folder: "img/"
-    public_folder: "/blog/img/"
+    public_folder: "/content/blog/img/"
     create: true
     slug: "{{slug}}"
     fields:
@@ -27,9 +27,9 @@ collections:
 
   - name: "works"
     label: "Realizacje"
-    folder: "src/realizacje"
+    folder: "src/content/realizacje"
     media_folder: "img/"
-    public_folder: "/realizacje/img/"
+    public_folder: "/content/realizacje/img/"
     create: true
     slug: "{{slug}}"
     fields:

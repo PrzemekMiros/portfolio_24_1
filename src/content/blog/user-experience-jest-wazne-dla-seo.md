@@ -7,7 +7,7 @@ author: Przemek
 date: 2023-03-19
 tags:
   - pozycjonowanie
-thumbnail: /blog/img/blog-ux-seo.jpg
+thumbnail: /content/blog/img/blog-ux-seo.jpg
 ---
 ## Poznaj fakty na temat SEO
 

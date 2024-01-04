@@ -1,7 +1,7 @@
 ---
-imageGridOne: /realizacje/img/longscroll-1.jpg
+imageGridOne: /content/realizacje/img/longscroll-1.jpg
 author: Przemek
-imageGridTwo: /realizacje/img/longscroll-2.jpg
+imageGridTwo: /content/realizacje/img/longscroll-2.jpg
 client: Namioty
 title: Wypożyczalnia namiotów
 description: Strona internetowa dla firmy zajmującej się wynajmem namiotów i
@@ -9,9 +9,9 @@ description: Strona internetowa dla firmy zajmującej się wynajmem namiotów i
   silniki wyszukiwarek.
 date: 2023-05-15
 link: https://imprezowe-namioty.pl/
-thumbnail: /realizacje/img/namioty-thumb-big.jpg
-imageMain: /realizacje/img/namioty-thumb-big.jpg
-imageMobile: /realizacje/img/longscroll-mobile.jpg
+thumbnail: /content/realizacje/img/namioty-thumb-big.jpg
+imageMain: /content/realizacje/img/namioty-thumb-big.jpg
+imageMobile: /content/realizacje/img/longscroll-mobile.jpg
 category:
   - Strona internetowa
 ---

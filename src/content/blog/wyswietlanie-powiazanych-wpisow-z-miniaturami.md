@@ -5,7 +5,7 @@ date: 2023-01-18T19:34:41.039Z
 author: Przemek Miros
 tags: 
   - wordpress
-thumbnail: /blog/img/wordpress-kurs-powiazane-wpisy.jpg
+thumbnail: /content/blog/img/wordpress-kurs-powiazane-wpisy.jpg
 ---
 
 W dzisiejszych czasach prawie wszystkie strony internetowe mają sekcję blogów i wszystkie firmy starają się przyciągnąć więcej odwiedzających dzięki nim.

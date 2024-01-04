@@ -7,7 +7,7 @@ author: Przemek
 date: 2023-03-21
 tags:
   - pozycjonowanie
-thumbnail: /blog/img/blog-site-long.jpg
+thumbnail: /content/blog/img/blog-site-long.jpg
 ---
 Dowiedziałeś się, jakie problemy powodują, że klienci opuszczają witrynę Twojej firmy. Teraz skupmy się na tym, jak zatrzymać ich dłużej na stronie, aby zmaksymalizować konwersję i przekształcić użytkowników w płacących i lojalnych klientów.
 

@@ -5,7 +5,7 @@ author: Przemek Miros
 date: 2023-01-08T19:34:41.039Z
 tags:
   - wordpress
-thumbnail: /blog/img/wordpress-kurs-petla.jpg
+thumbnail: /content/blog/img/wordpress-kurs-petla.jpg
 ---
 
 

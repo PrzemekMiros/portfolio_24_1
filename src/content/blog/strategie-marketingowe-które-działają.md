@@ -7,7 +7,7 @@ date: 2020-07-19T22:30:56.973Z
 author: Przemek Miros
 tags:
   - marketing
-thumbnail: /blog/img/blog-marketing-strategy.jpg
+thumbnail: /content/blog/img/blog-marketing-strategy.jpg
 ---
 Czy w pełni wykorzystujesz możliwości marketingu online? Przy tak wielu potencjalnych kupujących aktywnie korzystających z wyszukiwarek, witryn internetowych, aplikacji i mediów społecznościowych w celu wyboru najlepszego produktu lub usługi, musisz być widoczny i zapewniać najlepsze doświadczenia, aby pomóc im wybrać swoją markę.
 

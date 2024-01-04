@@ -5,7 +5,7 @@ author: Przemek Miros
 date: 2022-11-19T22:33:50.159Z
 tags:
   - pozycjonowanie
-thumbnail: /blog/img/blog-media-seo.jpg
+thumbnail: /content/blog/img/blog-media-seo.jpg
 ---
 Google obsługuje ponad 11 miliardów zapytań miesięcznie, a Facebook zbliża się do 800 milionów użytkowników. Na całym świecie jest ponad 5 miliardów abonentów smartfonów, a co dwa dni powstaje więcej informacji niż między początkiem cywilizacji a 2003 rokiem. Era komunikacji i cyfrowych relacji między markami, mediami i konsumentami zmieniła się szybciej i w sposób, w jaki niewiele osób mogło się zmienić.
 

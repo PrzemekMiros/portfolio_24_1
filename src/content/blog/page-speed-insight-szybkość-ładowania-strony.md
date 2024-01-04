@@ -8,7 +8,7 @@ author: Przemek Miros
 date: 2023-02-30T14:03:57.668Z
 tags:
   - pozycjonowanie
-thumbnail: /blog/img/page-speed.png
+thumbnail: /content/blog/img/page-speed.png
 ---
 **Page Speed Insight - szybkość ładowania strony. Jak wpływa na pozycjonowanie w Google?**
 

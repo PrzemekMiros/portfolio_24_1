@@ -5,7 +5,7 @@ author: Przemek
 date: 2022-02-09
 tags:
   - strony www
-thumbnail: /blog/img/blog-ugly-website.jpg
+thumbnail: /content/blog/img/blog-ugly-website.jpg
 ---
 ## Twój design jest przestarzały
 

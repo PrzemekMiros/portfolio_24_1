@@ -3,8 +3,13 @@
 <section class="pt-large pt-md-xlarge pb-small" data-scroll-section>
     <div class="container">
 
-        <div class="row">
-            <div class="offset-md-2 offset-lg-3 col-md-8 col-lg-6">
+        <div class="content row gx-5 fadeIn" id="pinShare">
+            <div class="offset-md-1 col-md-5">
+                    <div class="parallax-wrap aspect_16-9 fadeIn mb-3 mb-lg-5">
+                        <img src="{{ thumbnail | url }}" alt="{{ title }}" class="single-post-image img-fluid">
+                    </div>
+            </div>
+            <div class="col-md-6">
                     <div class="single-post-title-wrap">
                         <div class="breacrumbs fadeIn">
                             <a href="/" title="Strona glówna">
@@ -23,39 +28,23 @@
                                 {{ title }}
                             </span>
                         </div>
-                        <h1 class="xl single-post-title split-text-lines mt-3 mb-4 mb-md-5">
+                        <h1 class="single-post-title split-text-lines mt-3 mb-4 mb-md-5">
                             {{ title }}
                         </h1>
                     </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="offset-md-1 col-md-10">
-                    <div class="parallax-wrap aspect_16-9 fadeIn mb-3 mb-lg-5">
-                        <img src="{{ thumbnail | url }}" alt="{{ title }}" class="single-post-image img-fluid">
-                    </div>
-            </div>
-        </div>
-
-        <div class="content row gx-5 fadeIn" id="pinShare">
-            <div class="offset-md-1 offset-lg-2 col-md-1 col-lg-1 d-none d-md-block">
-                <div class="pinned-progress" data-scroll data-scroll-sticky data-scroll-target="#pinShare">
-                    <div class="scrollprogress-wrap">             
-                        <div class="scrollprogress"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8 col-lg-6">
                 {{ content | safe}}
-                <button class="snipcart-add-item"
+                    <button title="Zobacz więcej" class="button magnetic snipcart-add-item fadeIn mt-2 mb-2" data-strength="100" data-strength-text="50"
                     data-item-id="{{ counter }}"
                     data-item-price="79.99"
                     data-item-description="{{ description }}"
                     data-item-image="{{ thumbnail | url }}"
-                    data-item-name="{{ title }}">
-                        Kup teraz
-                </button>
+                    data-item-name="{{ title }}"> 
+                        <span>Kup teraz</span>
+                        <svg width="11" height="11" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 1L1 13" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3 1H13V11" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
             </div>
         </div>
 

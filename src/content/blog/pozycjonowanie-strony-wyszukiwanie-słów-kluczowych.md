@@ -8,7 +8,7 @@ author: Przemek Miros
 date: 2023-02-28T12:59:32.236Z
 tags:
   - pozycjonowanie
-thumbnail: /blog/img/keyword.jpg
+thumbnail: /content/blog/img/keyword.jpg
 ---
 Pozycjonowanie strony to proces optymalizacji witryny internetowej w taki sposób, aby znalazła się na jak najwyższej pozycji w wynikach wyszukiwania dla określonych słów kluczowych. W dzisiejszych czasach większość użytkowników internetu korzysta z wyszukiwarek, takich jak Google, aby znaleźć informacje, produkty lub usługi, które ich interesują. Dlatego ważne jest, aby Twoja strona internetowa była widoczna na pierwszych pozycjach w wynikach wyszukiwania. Aby to osiągnąć, musisz zrozumieć, jak działa wyszukiwanie słów kluczowych.
 

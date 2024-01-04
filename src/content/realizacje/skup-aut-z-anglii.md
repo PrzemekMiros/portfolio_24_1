@@ -9,8 +9,8 @@ date: 2022-06-01T13:25:45.709Z
 category:
   - Strona internetowa
 link: https://skup-anglikow.pl/
-thumbnail: /realizacje/img/angliki-thumb-big.jpg
-imageMain: /realizacje/img/angliki-thumb-big.jpg
+thumbnail: /content/realizacje/img/angliki-thumb-big.jpg
+imageMain: /content/realizacje/img/angliki-thumb-big.jpg
 ---
 
 ## Skup aut z Anglii
