@@ -10,7 +10,7 @@ author: Przemek Miros
 date: 2022-10-09T13:40:00.000Z
 tags:
   - wordpress
-thumbnail: /blog/img/standardy-wp.png
+thumbnail: /content/blog/img/standardy-wp.png
 ---
 Standardy kodowania to kosmetyka i raczej ciekawostka. Nie wpływają one zazwyczaj na wydajność ale mogą uchronić przed typowo ludzkimi błędami w trakcie programowania. Zespół kodujący i programujący rdzeń WordPressa przestrzega tych umownych reguł. Myślę, że warto je poznać, jeżeli tworzymy własne motywy, wtyczki lub wprowadzamy jakiekolwiek inne modyfikacje.
 
