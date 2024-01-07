@@ -63,6 +63,7 @@ module.exports = function(eleventyConfig) {
           });
       
           let lowestSrc = stats['jpeg'][0];
+          let blurUpSrc = stats['jpeg'][1];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -107,6 +108,7 @@ module.exports = function(eleventyConfig) {
           });
       
           let lowestSrc = stats['jpeg'][0];
+          let blurUpSrc = stats['jpeg'][1];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
