@@ -1,5 +1,4 @@
 ---
-layout: layouts/case.njk
 client: Kajaki24 Warka
 title: Wypożyczalnia kajaków
 description: Strona dla wypozyczlni kajaków. Technologia Jamstack, Eleventy.js i Netlify CMS. Indywidualny projekt graficzny, animacje, widget pogodowy.
@@ -11,6 +10,7 @@ category:
 link: https://kajaki24.com.pl/
 thumbnail: /content/realizacje/img/kajaki-thumb-big.jpg
 imageMain: /content/realizacje/img/kajaki-thumb-big.jpg
+order: 18
 ---
 
 ## Wypożyczalnia Kajaków

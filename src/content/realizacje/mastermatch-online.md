@@ -9,8 +9,10 @@ imageMain: /content/realizacje/img/master-thumb-big.jpg
 imageMobile: /content/realizacje/img/master-mobile.jpg
 imageGridOne: /content/realizacje/img/master-1.jpg
 imageGridTwo: /content/realizacje/img/master-2.jpg
-category: ['Strona internetowa']
+category: 
+  - Strona internetowa
 link: https://mastermatch.online/
+order: 11
 ---
 
 ## Klub networkingowy

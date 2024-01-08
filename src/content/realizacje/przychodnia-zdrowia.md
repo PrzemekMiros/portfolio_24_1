@@ -1,5 +1,4 @@
 ---
-layout: layouts/case.njk
 client: SPZOZ Grabów
 title: Przychodnia zdrowia
 description: "Strona dla Przychodni Zdrowia. Indywidualny projekt graficzny.
@@ -12,6 +11,7 @@ category:
 link: https://przychodniagrabow.pl/
 thumbnail: /content/realizacje/img/przychodnia-thumb-big.jpg
 imageMain: /content/realizacje/img/przychodnia-thumb-big.jpg
+order: 14
 ---
 
 ## Przychodnia zdrowia

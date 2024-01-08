@@ -1,5 +1,4 @@
 ---
-layout: layouts/case.njk
 client: Moneso
 title: Producent mebli z drewna
 description: Strona internetowa ze sklepem dla producenta mebli z drewna.
@@ -13,6 +12,7 @@ category:
 link: https://moneso.pl/
 thumbnail: /content/realizacje/img/moneso-thumb-big.jpg
 imageMain: /content/realizacje/img/moneso-thumb-big.jpg
+order: 4 
 ---
 
 ## Meble z litego drewna

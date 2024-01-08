@@ -26,9 +26,15 @@ module.exports = function(eleventyConfig) {
         });
     
         // Collections portfolio
-        eleventyConfig.addCollection('works', function(collectionApi) {
-        return collectionApi.getFilteredByGlob('src/content/realizacje/**/*.md').reverse();
+        eleventyConfig.addCollection('works', (collection) => {
+          const works = collection.getFilteredByGlob('src/content/realizacje/**/*.md').reverse();
+          return works.sort((a, b) => {
+            const orderA = a.data.order || 0; // Ustawiamy domyślną wartość na wypadek braku pola order
+            const orderB = b.data.order || 0;
+            return orderA - orderB;
+          });
         });
+        
 
         // Collections services
         eleventyConfig.addCollection('services', function(collectionApi) {

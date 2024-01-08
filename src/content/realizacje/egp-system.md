@@ -9,8 +9,10 @@ imageMain: /content/realizacje/img/egp-img.jpg
 imageMobile: /content/realizacje/img/egp-mobile.jpg
 imageGridOne: /content/realizacje/img/egp-1.jpg
 imageGridTwo: /content/realizacje/img/egp-2.jpg
-category: ['Sklep internetowy']
+category: 
+  - Sklep internetowy
 link: https://egp-system.com/
+order: 3
 ---
 
 ## Producent nanokoloidów

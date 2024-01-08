@@ -9,8 +9,10 @@ imageMain: /content/realizacje/img/staltom-thumb-big.jpg
 imageMobile: /content/realizacje/img/staltom-mobile.jpg
 imageGridOne: /content/realizacje/img/staltom-1.jpg
 imageGridTwo: /content/realizacje/img/staltom-2.jpg
-category: ['Strona internetowa']
+category: 
+  - Strona internetowa
 link: https://staltom.com.pl/
+order: 16
 ---
 
 ## Producent konstrukcji stalowych

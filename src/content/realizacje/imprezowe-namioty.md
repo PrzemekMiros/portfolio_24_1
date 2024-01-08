@@ -1,6 +1,6 @@
 ---
 imageGridOne: /content/realizacje/img/longscroll-1.jpg
-author: Przemek
+author: Przemek Miros
 imageGridTwo: /content/realizacje/img/longscroll-2.jpg
 client: Namioty
 title: Wypożyczalnia namiotów
@@ -14,6 +14,7 @@ imageMain: /content/realizacje/img/namioty-thumb-big.jpg
 imageMobile: /content/realizacje/img/longscroll-mobile.jpg
 category:
   - Strona internetowa
+order: 19
 ---
 ## Wypożyczalnia namiotów na imprezy
 

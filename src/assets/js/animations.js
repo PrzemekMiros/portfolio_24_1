@@ -342,7 +342,7 @@ elementsWorks.forEach((element, index) => {
   element.addEventListener("mouseenter", function () {
     gsap.to(slidePicsWorks, {
       marginTop: `-${320 * index}px`,
-      ease: "power2.out",
+      ease: "power1.out",
       duration: .5, // Image in wrapper
     });
   });
