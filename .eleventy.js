@@ -52,9 +52,9 @@ module.exports = function(eleventyConfig) {
         });
 
         // Collections towns
-        // eleventyConfig.addCollection('towns', function(collectionApi) {
-        // return collectionApi.getFilteredByGlob('src/content/miasta/**/*.md').reverse();
-        // });
+        eleventyConfig.addCollection('towns', function(collectionApi) {
+        return collectionApi.getFilteredByGlob('src/content/miasta/**/*.md').reverse();
+        });
 
         eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt) => {
           if (!alt) {
@@ -88,10 +88,8 @@ module.exports = function(eleventyConfig) {
             loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
-            data-src="${lowestSrc.url}" 
-            data-srcset="${srcset['jpeg']}" 
-            sizes='(min-width: 1024px) 1024px, 100vw'
             srcset="${srcset['jpeg']}"
+            sizes='(min-width: 1024px) 1024px, 100vw'
             width="${lowestSrc.width}"
             height="${lowestSrc.height}"
             style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-size: cover;"  
