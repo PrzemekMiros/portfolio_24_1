@@ -63,6 +63,7 @@ module.exports = function(eleventyConfig) {
           });
       
           let lowestSrc = stats['jpeg'][0];
+          let blurUpSrc = stats['jpeg'][1];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -76,18 +77,16 @@ module.exports = function(eleventyConfig) {
           );
       
           const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
-      
+        
           const img = `<img
             loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
-            data-src="${lowestSrc.url}" 
-            data-srcset="${srcset['jpeg']}" 
+            srcset="${srcset['jpeg']}" 
             sizes='(min-width: 1024px) 1024px, 100vw'
-            srcset="${srcset['jpeg']}"
             width="${lowestSrc.width}"
             height="${lowestSrc.height}"
-            style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-size: cover;"  
+            style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-color: transparent; background-size: cover;"  
             >`;
       
           return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
@@ -107,6 +106,7 @@ module.exports = function(eleventyConfig) {
           });
       
           let lowestSrc = stats['jpeg'][0];
+          let blurUpSrc = stats['jpeg'][1];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -131,7 +131,7 @@ module.exports = function(eleventyConfig) {
             srcset="${srcset['jpeg']}"
             width="${lowestSrc.width}"
             height="${lowestSrc.height}"
-            style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-size: cover;"  
+            style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-color: transparent; background-size: cover;"  
             >`;
       
           return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
