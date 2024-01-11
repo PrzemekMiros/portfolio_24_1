@@ -74,7 +74,7 @@ module.exports = function(eleventyConfig) {
           const srcsetWebp = stats['webp'].map(entry => `${entry.url} ${entry.width}w`).join(', ');
           const srcsetJpeg = stats['jpeg'].map(entry => `${entry.url} ${entry.width}w`).join(', ');
       
-          const sizes = '(max-width: 320px) 280px, (max-width: 640px) 600px, (max-width: 960px) 920px, 100vw';
+          const sizes = '(min-width: 1024px) 1024px, 100vw';
       
           const source = `<source type="image/webp" srcset="${srcsetWebp}">`;
       
