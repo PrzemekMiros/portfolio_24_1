@@ -26,9 +26,15 @@ module.exports = function(eleventyConfig) {
         });
     
         // Collections portfolio
-        eleventyConfig.addCollection('works', function(collectionApi) {
-        return collectionApi.getFilteredByGlob('src/content/realizacje/**/*.md').reverse();
+        eleventyConfig.addCollection('works', (collection) => {
+          const works = collection.getFilteredByGlob('src/content/realizacje/**/*.md').reverse();
+          return works.sort((a, b) => {
+            const orderA = a.data.order || 0; // Ustawiamy domyślną wartość na wypadek braku pola order
+            const orderB = b.data.order || 0;
+            return orderA - orderB;
+          });
         });
+        
 
         // Collections services
         eleventyConfig.addCollection('services', function(collectionApi) {
@@ -46,9 +52,9 @@ module.exports = function(eleventyConfig) {
         });
 
         // Collections towns
-        // eleventyConfig.addCollection('towns', function(collectionApi) {
-        // return collectionApi.getFilteredByGlob('src/content/miasta/**/*.md').reverse();
-        // });
+        eleventyConfig.addCollection('towns', function(collectionApi) {
+        return collectionApi.getFilteredByGlob('src/content/miasta/**/*.md').reverse();
+        });
 
         eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt) => {
           if (!alt) {
@@ -65,29 +71,23 @@ module.exports = function(eleventyConfig) {
           let lowestSrc = stats['jpeg'][0];
           let blurUpSrc = stats['jpeg'][1];
       
-          const srcset = Object.keys(stats).reduce(
-            (acc, format) => ({
-              ...acc,
-              [format]: stats[format].reduce(
-                (_acc, curr) => `${_acc} ${curr.srcset} ,`,
-                '',
-              ),
-            }),
-            {},
-          );
+          const srcsetWebp = stats['webp'].map(entry => `${entry.url} ${entry.width}w`).join(', ');
+          const srcsetJpeg = stats['jpeg'].map(entry => `${entry.url} ${entry.width}w`).join(', ');
       
-          const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
-        
+          const source = `<source type="image/webp" srcset="${srcsetWebp}">`;
+      
           const img = `<img
             loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
-            srcset="${srcset['jpeg']}" 
+            data-src="${lowestSrc.url}" 
+            data-srcset="${srcsetJpeg}" 
             sizes='(min-width: 1024px) 1024px, 100vw'
+            srcset="${srcsetJpeg}"
             width="${lowestSrc.width}"
             height="${lowestSrc.height}"
             style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-color: transparent; background-size: cover;"  
-            >`;
+          >`;
       
           return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
@@ -117,7 +117,7 @@ module.exports = function(eleventyConfig) {
               ),
             }),
             {},
-          );
+          ); 
       
           const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
       

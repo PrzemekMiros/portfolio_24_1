@@ -40,55 +40,77 @@ description: Zobacz wybrane realizacje stron, sklepów i serwisów internetowych
       </svg>
     </div>
   </div>
-  
+
   <div class="pb-medium pb-md-large">
-      <div class="line-x lx-2"></div>
+    <div class="line-x lx-2"></div>
   </div>
-  
-              {% for post in collections.works %}
-                  <div class="works-grid-item">             
-                      <div class="row gx-5 flex-row-reverse archive-post pb-xsmall pb-md-medium">
-                        <div class="col-md-6 fadeIn mb-0">
-                          <a href="{{ post.url }}" title="{{ post.data.title }}">
-                           <div class="portfolio-item">
-                            <div class="parallax-wrap aspect_16-12">
-                              {% workImage "src/" + post.data.thumbnail, post.data.title %}
-                            </div>
-                           </div>
-                          </a>
-                        </div>
-                        <div class="col-md-6 d-flex align-items-center">
-                          <div class="pr-md-5">
-                              <a href="{{ post.url }}" title="{{ post.data.client }}">
-                                  <p class="split-text-lines color-accent-1 bold mt-4 mb-2">
-                                      {{ post.data.client }}
-                                  </p>
-                              </a>
-                              <a href="{{ post.url }}" title="{{ post.data.title }}">
-                                  <h3 class="archive-post-title split-text-lines h2 my-3">
-                                      {{ post.data.title }}
-                                  </h3>
-                              </a>
-                              <div class="d-none d-lg-block">
-                                  <p class="line-clamp-3 split-text-lines mt-4 mb-4">
-                                      {{ post.data.description}}
-                                  </p>
-                              </div>
-                              <a href="{{ post.url }}" title="Zobacz więcej" class="button magnetic fadeIn mt-2 mb-2" data-strength="100" data-strength-text="50"> 
-                                  <span>Zobacz więcej</span>
-                                  <svg width="11" height="11" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M13 1L1 13" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                      <path d="M3 1H13V11" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                  </svg>
-                              </a>
-                          </div>
-                        </div>
-                      </div>
-                          <div class="pb-small pb-md-medium">
-                              <div class="line-x lx-1 lx-op"></div>
-                          </div>
-                  </div>
-              {% endfor %}
-  
+
+  {% for post in collections.works %}
+  <div class="works-grid-item">
+    <div class="row gx-5 flex-row-reverse archive-post pb-xsmall pb-md-medium">
+      <div class="col-md-6 fadeIn mb-0">
+        <a href="{{ post.url }}" title="{{ post.data.title }}">
+          <div class="portfolio-item">
+            <div class="parallax-wrap aspect_16-12">
+              {% workImage "src/" + post.data.thumbnail, post.data.title %}
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="pr-md-5">
+          <a href="{{ post.url }}" title="{{ post.data.client }}">
+            <p class="split-text-lines color-accent-1 bold mt-4 mb-2">
+              {{ post.data.client }}
+            </p>
+          </a>
+          <a href="{{ post.url }}" title="{{ post.data.title }}">
+            <h3 class="archive-post-title split-text-lines h2 my-3">
+              {{ post.data.title }}
+            </h3>
+          </a>
+          <div class="d-none d-lg-block">
+            <p class="line-clamp-3 split-text-lines mt-4 mb-4">
+              {{ post.data.description }}
+            </p>
+          </div>
+          <a
+            href="{{ post.url }}"
+            title="Zobacz więcej"
+            class="button magnetic fadeIn mt-2 mb-2"
+            data-strength="100"
+            data-strength-text="50"
+          >
+            <span>Zobacz więcej</span>
+            <svg
+              width="11"
+              height="11"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13 1L1 13"
+                stroke="var(--color-accent-1)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M3 1H13V11"
+                stroke="var(--color-accent-1)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pb-small pb-md-medium">
+      <div class="line-x lx-1 lx-op"></div>
+    </div>
+  </div>
+  {% endfor %}
 </div>
- 

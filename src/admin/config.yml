@@ -16,7 +16,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
       - {label: "Tytuł", name: "title", widget: "string"}
       - {label: "Opis", name: "description", widget: "text"}
       - {label: "Autor", name: "author", widget: "string"}
@@ -33,7 +32,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/case.njk"}
       - {label: "Klient", name: "client", widget: "string"}
       - {label: "Tytuł", name: "title", widget: "string"}
       - {label: "Opis", name: "description", widget: "text"}
@@ -49,7 +47,7 @@ collections:
  # Faq
   - label: "FAQ"
     name: "faq"
-    folder: "src/faq"
+    folder: "src/content/faq"
     create: true
     fields:
       - {label: "Pytanie", name: "title", widget: "string"}

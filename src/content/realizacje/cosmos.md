@@ -1,5 +1,4 @@
 ---
-layout: layouts/case.njk
 client: Cosmos
 title: Agencja aktorska
 description: Strona internetowa dla agencji aktorskiej. Projekt graficzny,
@@ -12,6 +11,7 @@ category:
 link: https://agencjacosmos.pl/
 thumbnail: /content/realizacje/img/cosmos-thumb-big.jpg
 imageMain: /content/realizacje/img/cosmos-thumb-big.jpg
+order: 8
 ---
 
 ## Agencja aktorska

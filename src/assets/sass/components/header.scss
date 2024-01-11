@@ -6,6 +6,7 @@
   width: 100vw;
   transform: translateY(0);
   transition: .4s ease-in-out;
+  pointer-events: none;
   z-index: 20
 }
 
@@ -30,7 +31,8 @@
 }
 
 .logo-wrap a {
-  display: inline-block
+  display: inline-block;
+  pointer-events: all
 }
 
 .logo-wrap img {
@@ -54,13 +56,13 @@
   border-radius: 50%;
   background: #fff;
   border: none;
-  pointer-events: all;
   cursor: pointer
 }
 
 .menu-toggle-wrap {
   margin-top: -7px;
-  display: flex
+  display: flex;
+  pointer-events: all
 }
 
 .hamburger {
@@ -136,7 +138,7 @@
 }
 
 .main-menu li {
-  margin-bottom: 1.9em;
+  margin-bottom: 1.75em;
   width: 100%;
   overflow: hidden;
   transition: transform .3s ease-in-out 0s;
@@ -189,6 +191,10 @@
 
 .nav-info-social {
   margin-bottom: .3em
+}
+
+.nav-info-social a {
+  display: inline-block
 }
 
 .nav-info-social svg {

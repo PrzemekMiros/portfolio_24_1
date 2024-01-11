@@ -9,8 +9,10 @@ imageMain: /content/realizacje/img/gaszyn-thumb-big.jpg
 imageMobile: /content/realizacje/img/gaszyn-mobile.jpg
 imageGridOne: /content/realizacje/img/gaszyn-1.jpg
 imageGridTwo: /content/realizacje/img/gaszyn-2.jpg
-category: ['Strona internetowa']
+category: 
+  - Strona internetowa
 link: https://gaszynpark.pl/
+order: 20
 ---
 
 ## Osiedle dla wymagających

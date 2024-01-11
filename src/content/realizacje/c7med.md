@@ -9,8 +9,10 @@ imageMain: /content/realizacje/img/c7med-thumb-big.jpg
 imageMobile: /content/realizacje/img/c7med-mobile.jpg
 imageGridOne: /content/realizacje/img/c7med-1.jpg
 imageGridTwo: /content/realizacje/img/c7med-2.jpg
-category: ['Strona internetowa']
+category: 
+  - Strona internetowa
 link: https://c7med.pl/
+order: 6
 ---
 
 ## Centrum Rehabilitacji

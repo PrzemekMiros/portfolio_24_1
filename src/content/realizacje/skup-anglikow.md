@@ -1,5 +1,4 @@
 ---
-layout: layouts/case.njk
 client: Skup Anglików
 title: Skup aut z Anglii
 description: Strona www oparta na CMS Wordpress. Indywidualny projekt graficzny
@@ -11,6 +10,7 @@ category:
 link: https://skup-anglikow.pl/
 thumbnail: /content/realizacje/img/angliki-thumb-big.jpg
 imageMain: /content/realizacje/img/angliki-thumb-big.jpg
+order: 15
 ---
 
 ## Skup aut z Anglii

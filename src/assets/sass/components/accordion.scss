@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+  width: 100%;
   margin-bottom: .5em;
   padding-left: 0;
   list-style: none;
@@ -16,11 +17,12 @@
 .accordion .title {
   padding-right: 3.2em;
   transition: 1.3s cubic-bezier(.79,0,.07,.88);
+  text-align: left;
 }
 
 .icon {
   position: absolute;
-  top: calc(50% - 20px);
+  top: calc(50% - 10px);
   right: 0;
   width: 20px;
   height: 3px;
