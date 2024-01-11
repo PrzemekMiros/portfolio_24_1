@@ -45,7 +45,8 @@ body {
     color: inherit
   }
 
-  a:focus-visible {
+  a:focus-visible,
+  button:focus-visible {
     outline: 2px dotted var(--color-accent-1);
   }
 

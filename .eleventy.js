@@ -58,7 +58,7 @@ module.exports = function(eleventyConfig) {
 
         eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt) => {
           if (!alt) {
-            throw new Error(`Missing \`alt\` on Image from: ${src}`);
+            throw new Error(`Missing \`alt\` on myImage from: ${src}`);
           }
       
           let stats = await Image(src, {
@@ -71,27 +71,31 @@ module.exports = function(eleventyConfig) {
           let lowestSrc = stats['jpeg'][0];
           let blurUpSrc = stats['jpeg'][1];
       
-          const srcsetWebp = stats['webp'].map(entry => `${entry.url} ${entry.width}w`).join(', ');
-          const srcsetJpeg = stats['jpeg'].map(entry => `${entry.url} ${entry.width}w`).join(', ');
+          const srcset = Object.keys(stats).reduce(
+            (acc, format) => ({
+              ...acc,
+              [format]: stats[format].reduce(
+                (_acc, curr) => `${_acc} ${curr.srcset} ,`,
+                '',
+              ),
+            }),
+            {},
+          );
       
-          const sizes = '(min-width: 1024px) 1024px, 100vw';
-      
-          const source = `<source type="image/webp" srcset="${srcsetWebp}">`;
-      
+          const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
+        
           const img = `<img
             loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
-            data-src="${lowestSrc.url}" 
-            data-srcset="${srcsetJpeg}" 
-            sizes="${sizes}"
-            srcset="${srcsetJpeg}"
+            srcset="${srcset['jpeg']}" 
+            sizes='(min-width: 1024px) 1024px, 100vw'
             width="${lowestSrc.width}"
             height="${lowestSrc.height}"
             style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-color: transparent; background-size: cover;"  
-          >`;
+            >`;
       
-          return `<div class="image-wrapper"><picture>${source}${img}</picture></div>`;
+          return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
   
   
@@ -119,7 +123,7 @@ module.exports = function(eleventyConfig) {
               ),
             }),
             {},
-          ); 
+          );
       
           const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
       
@@ -144,7 +148,7 @@ module.exports = function(eleventyConfig) {
           if (!alt) {
             throw new Error(`Missing \`alt\` on myImage from: ${src}`);
           }
-      
+       
           let stats = await Image(src, {
             widths: [25, 320, 640, 960, 1200, 1800, 2400],
             formats: ['jpeg', 'webp'],
