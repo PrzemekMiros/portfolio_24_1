@@ -35,7 +35,6 @@ module.exports = function(eleventyConfig) {
           });
         });
         
-
         // Collections services
         eleventyConfig.addCollection('services', function(collectionApi) {
         return collectionApi.getFilteredByGlob('src/content/uslugi/**/*.md').reverse();
@@ -56,6 +55,7 @@ module.exports = function(eleventyConfig) {
         return collectionApi.getFilteredByGlob('src/content/miasta/**/*.md').reverse();
         });
 
+         
         eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt) => {
           if (!alt) {
             throw new Error(`Missing \`alt\` on myImage from: ${src}`);
@@ -68,8 +68,7 @@ module.exports = function(eleventyConfig) {
             outputDir: './public/assets/img/',
           });
       
-          let lowestSrc = stats['jpeg'][0];
-          let blurUpSrc = stats['jpeg'][1];
+          let lowestSrc = stats['jpeg'][0]; 
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -83,19 +82,17 @@ module.exports = function(eleventyConfig) {
           );
       
           const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
-        
+      
           const img = `<img
             loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
-            srcset="${srcset['jpeg']}" 
             sizes='(min-width: 1024px) 1024px, 100vw'
+            srcset="${srcset['jpeg']}"
             width="${lowestSrc.width}"
-            height="${lowestSrc.height}"
-            style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-color: transparent; background-size: cover;"  
-            >`;
-      
-          return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
+            height="${lowestSrc.height}">`;
+
+          return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
         });
   
   
@@ -112,7 +109,6 @@ module.exports = function(eleventyConfig) {
           });
       
           let lowestSrc = stats['jpeg'][0];
-          let blurUpSrc = stats['jpeg'][1];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -131,16 +127,12 @@ module.exports = function(eleventyConfig) {
             loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
-            data-src="${lowestSrc.url}" 
-            data-srcset="${srcset['jpeg']}" 
             sizes='(min-width: 1024px) 1024px, 100vw'
             srcset="${srcset['jpeg']}"
             width="${lowestSrc.width}"
-            height="${lowestSrc.height}"
-            style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-color: transparent; background-size: cover;"  
-            >`;
+            height="${lowestSrc.height}">`;
       
-          return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
+            return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
         });
   
 
@@ -148,16 +140,15 @@ module.exports = function(eleventyConfig) {
           if (!alt) {
             throw new Error(`Missing \`alt\` on myImage from: ${src}`);
           }
-       
+      
           let stats = await Image(src, {
             widths: [25, 320, 640, 960, 1200, 1800, 2400],
             formats: ['jpeg', 'webp'],
-            urlPath: '/realizacje/img/',
-            outputDir: './public/realizacje/img/',
+            urlPath: '/content/realizacje/img/',
+            outputDir: './public/content/realizacje/img/',
           });
       
           let lowestSrc = stats['jpeg'][0];
-          let blurUpSrc = stats['jpeg'][1];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -176,18 +167,13 @@ module.exports = function(eleventyConfig) {
             loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
-            data-src="${lowestSrc.url}" 
-            data-srcset="${srcset['jpeg']}" 
             sizes='(min-width: 1024px) 1024px, 100vw'
             srcset="${srcset['jpeg']}"
             width="${lowestSrc.width}"
-            height="${lowestSrc.height}"
-            style="background-image: url('${blurUpSrc.url.replace('/320/', '/25/')}'); background-size: cover;"  
-            >`;
+            height="${lowestSrc.height}">`;
       
-          return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
+            return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
         });
-  
         
 
       // Code blocks

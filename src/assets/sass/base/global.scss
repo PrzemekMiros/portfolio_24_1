@@ -24,21 +24,25 @@ body {
     background-position: center;
   }
 
-  .image-wrapper {
-    display: block;
-    width: 100%;
-    height: auto; /* Dostosuj wysokość w zależności od proporcji obrazka */
-    overflow: hidden;
-}
-
-.image-wrapper img {
-    transition: opacity 0.3s ease-in-out
-}
-
-.image-wrapper img[data-src] {
+  .blur-load {
+    background-size: cover;
+    background-position: center;
+    // filter: blur(10px);
+    transition: filter .5s ease-in-out;
+  }
+  
+  .blur-load.loaded {
+    // filter: blur(0px);
+  }
+  
+  .blur-load img {
+    opacity: 0;
+    transition: opacity .75s ease-in-out;
+  }
+  
+  .blur-load.loaded img {
     opacity: 1;
-    filter: blur(0); 
-}
+  }
 
   a {
     text-decoration: none;
