@@ -92,7 +92,7 @@ module.exports = function(eleventyConfig) {
             width="${lowestSrc.width}"
             height="${lowestSrc.height}">`;
 
-          return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
+          return `<div class="image-wrapper" ><picture> ${source} ${img} </picture></div>`;
         });
   
   
@@ -132,7 +132,7 @@ module.exports = function(eleventyConfig) {
             width="${lowestSrc.width}"
             height="${lowestSrc.height}">`;
       
-            return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
+            return `<div class="image-wrapper" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
         });
   
 
@@ -172,7 +172,7 @@ module.exports = function(eleventyConfig) {
             width="${lowestSrc.width}"
             height="${lowestSrc.height}">`;
       
-            return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
+            return `<div class="image-wrapper" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
         });
         
 
