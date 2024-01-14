@@ -41,10 +41,9 @@ if (document.querySelector('.swiper')) {
   var swiper = new Swiper(".swiper", {
     grabCursor: true,
     spaceBetween: 20,
-    preloadImages: false,
     lazy: true,
     lazy: {
-        loadPrevNext: false,
+        loadPrevNext: true,
         loadOnTransitionStart: true
     },
     centeredSlides: false,

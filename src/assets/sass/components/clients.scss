@@ -1,5 +1,5 @@
 .client-card {
-  padding: 3em 2em 6em;
+  padding: 3em 2em 7em;
   border-radius: 15px;
   background: var(--color-light-2);
   text-align: center;
@@ -7,7 +7,10 @@
 }
 
 .client-image {
-  position: relative
+  position: relative;
+  margin-top: 2em;
+  width: 85%;
+  margin: 0 auto
 }
 
 .client-name p {

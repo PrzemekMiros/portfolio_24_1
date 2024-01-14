@@ -50,6 +50,11 @@ module.exports = function(eleventyConfig) {
         return collectionApi.getFilteredByGlob('src/content/faq/**/*.md');
         });
 
+        // Collection faq
+        eleventyConfig.addCollection("clients", function(collectionApi) {
+        return collectionApi.getFilteredByGlob('src/content/klienci/**/*.md');
+        });
+
         // Collections towns
         eleventyConfig.addCollection('towns', function(collectionApi) {
         return collectionApi.getFilteredByGlob('src/content/miasta/**/*.md').reverse();
@@ -104,7 +109,7 @@ module.exports = function(eleventyConfig) {
           }
       
           let stats = await Image(src, {
-            widths: [25, 320, 640, 960, 1200, 1800, 2400],
+            widths: [25, 320, 640, 960, 1200, 1800 ],
             formats: ['jpeg', 'webp'],
             urlPath: '/content/blog/img/',
             outputDir: './public/content/blog/img/',
@@ -145,7 +150,7 @@ module.exports = function(eleventyConfig) {
           }
         
           let stats = await Image(src, {
-            widths: [25, 320, 640, 960, 1200, 1800, 2400],
+            widths: [25, 320, 640, 960, 1200, 1800 ],
             formats: ['jpeg', 'webp'],
             urlPath: '/content/realizacje/img/',
             outputDir: './public/content/realizacje/img/',
@@ -179,6 +184,45 @@ module.exports = function(eleventyConfig) {
             return `<div class="image-wrapper blur-load"><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
         
+        eleventyConfig.addNunjucksAsyncShortcode('clientImage', async (src, alt) => {
+          if (!alt) {
+            throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+          }
+      
+          let stats = await Image(src, {
+            widths: [25, 320, 640, 960 ],
+            formats: ['jpeg', 'webp'],
+            urlPath: '/content/klienci/img/',
+            outputDir: './public/content/klienci/img/',
+          });
+      
+          let lowestSrc = stats['jpeg'][0];
+          let largestSrc = stats['jpeg'][1];
+      
+          const srcset = Object.keys(stats).reduce(
+            (acc, format) => ({
+              ...acc,
+              [format]: stats[format].reduce(
+                (_acc, curr) => `${_acc} ${curr.srcset} ,`,
+                '',
+              ),
+            }),
+            {},
+          );
+      
+          const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
+      
+          const img = `<img
+            alt="${alt}"
+            src="${lowestSrc.url}"
+            sizes='(min-width: 1024px) 1024px, 100vw'
+            srcset="${srcset['jpeg']}"
+            width="${lowestSrc.width}"
+            height="${lowestSrc.height}">`;
+      
+            return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
+        });
+  
 
       // Code blocks
       eleventyConfig.addPlugin(codeStyleHooks, {

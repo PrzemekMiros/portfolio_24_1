@@ -60,122 +60,20 @@
 
     <div class="swiper pb-medium">
       <div class="swiper-wrapper pt-medium">
+            {% for post in collections.clients %}
+
         <div class="swiper-slide fadeIn">
           <div class="client-card">
             <div class="client-name">
-              <p class="mt-0 mb-5">Magazyn kobiet biznesu</p>
+              <p class="mt-0 mb-5">{{ post.data.title }}</p>
             </div>
             <div class="client-image">
-             {% Image "src/assets/img/clients/logo-business.png", "Logo - Business Woman Life" %}
+            {% clientImage "src/" + post.data.logo, post.data.title %}
             </div>
           </div>
         </div>
+{% endfor %}
 
-        <div class="swiper-slide fadeIn">
-          <div class="client-card">
-            <div class="client-name">
-              <p class="mt-0 mb-5">Producent nanokoloidów</p>
-            </div>
-              <div class="client-image">
-                {% Image "src/assets/img/clients/logo-egp.png", "Logo - EGP System" %}
-              </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide fadeIn">
-          <div class="client-card">
-            <div class="client-name">
-              <p class="mt-0 mb-5">Dystrybutor rur</p>
-            </div>
-            <div class="client-image">
-              {% Image "src/assets/img/clients/logo-ecotech.png", "Logo - Eco Tech" %}
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide fadeIn">
-          <div class="client-card">
-            <div class="client-name">
-              <p class="mt-0 mb-5">Producent kotłów</p>
-            </div>
-            <div class="client-image">
-              {% Image "src/assets/img/clients/wako.png", "Logo - Wako Energy" %}
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide fadeIn">
-          <div class="client-card">
-            <div class="client-name">
-              <p class="mt-0 mb-5">Centrum rehabilitacji</p>
-            </div>
-              <div class="client-image">
-                {% Image "src/assets/img/clients/logo-c7med.png", "Logo - C7Med" %}
-              </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide fadeIn">
-          <div class="client-card">
-            <div class="client-name">
-              <p class="mt-0 mb-5">Preparaty dla rolnictwa</p>
-            </div>
-              <div class="client-image">
-                {% Image "src/assets/img/clients/smka.png", "Logo - SMKA" %}
-              </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide fadeIn">
-          <div class="client-card">
-            <div class="client-name">
-              <p class="mt-0 mb-5">Studio masażu i terapii</p>
-            </div>
-              <div class="client-image">
-                {% Image "src/assets/img/clients/logo-soul.png", "Logo - Soul" %}
-                </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide fadeIn">
-          <div class="client-card">
-            <div class="client-name">
-              <p class="mt-0 mb-5">Konstrukcje ze stali</p>
-            </div>
-              <div class="client-image">
-                {% Image "src/assets/img/clients/logo-staltom.png", "Logo - Staltom" %}
-                </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide fadeIn">
-          <div class="client-card">
-            <div class="client-name">
-              <p class="mt-0 mb-5">Pizzeria z dowozem</p>
-            </div>
-              <div class="client-image">
-                {% Image "src/assets/img/clients/logo-bianca.png", "Logo - Bianca" %}
-                </div>
-          </div>
-        </div>
-        <div class="swiper-slide fadeIn">
-          <div class="client-card">
-            <div class="client-name">
-              <p class="mt-0 mb-5">Złomowanie aut</p>
-            </div>
-              <div class="client-image">
-                {% Image "src/assets/img/clients/zlom.png", "Logo - Zlomowanie" %}
-                </div>
-          </div>
-        </div>
-        <div class="swiper-slide fadeIn">
-          <div class="client-card">
-            <div class="client-name">
-              <p class="mt-0 mb-5">Wypożyczalnia namiotów</p>
-            </div>
-              <div class="client-image">
-                {% Image "src/assets/img/clients/namioty.png", "Logo - Namioty" %}
-                </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
