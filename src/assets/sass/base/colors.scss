@@ -1,6 +1,6 @@
 
 :root {
-    --color-accent-1: #ef6545;
+    --color-accent-1: #e84d29;
     --color-accent-2: #5151f3;
     --color-dark-1: #090c0f;
     --color-dark-2: #121416;
@@ -13,6 +13,8 @@
 
 @media (prefers-color-scheme:dark) {
     :root {
+    --color-accent-1: #ef6545;
+    --color-accent-2: #5151f3;
     --color-dark-1: #f8f8f8;
     --color-dark-2: #f2f1e9;
     --color-light-1: #090c0f;
@@ -24,6 +26,8 @@
   }
   
   .light {
+    --color-accent-1: #e84d29;
+    --color-accent-2: #5151f3;
     --color-dark-1: #090c0f;
     --color-dark-2: #121416;
     --color-light-1: #f8f7f1;
@@ -34,6 +38,8 @@
   }
   
   .dark {
+    --color-accent-1: #ef6545;
+    --color-accent-2: #5151f3;
     --color-dark-1: #f8f8f8;
     --color-dark-2: #f2f1e9;
     --color-light-1: #090c0f;

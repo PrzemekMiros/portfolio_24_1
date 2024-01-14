@@ -2,7 +2,7 @@
 .transition-blur {
   opacity: 1;
 	filter: blur(0px);
-	transition: .35s ease-in-out
+	transition: .15s ease-in-out
 }
   
 html.is-animating .transition-blur {

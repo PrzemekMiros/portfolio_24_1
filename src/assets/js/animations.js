@@ -52,7 +52,7 @@ function animationMain() {
       });
        gsap.from(mySplitText.lines, {
            duration: 1,
-           delay: .3,
+           delay: .15,
            stagger: 0.05,
            yPercent: 100,
            ease: Power2. easeInOut,
@@ -73,7 +73,7 @@ function animationMain() {
              opacity: 0,
              y: 20,
              duration: 1,
-             delay: .3,
+             delay: .15,
              scrollTrigger: {
                scroller: ".scrollContainer",
                trigger: fadeInItem,
@@ -88,7 +88,7 @@ function animationMain() {
      gsap.from(lineXItem, { 
        width: "0",
        duration: .7,
-       delay: .3,
+       delay: .15,
        ease: Power2. easeInOut,
        scrollTrigger: {
          scroller: ".scrollContainer",
@@ -199,7 +199,7 @@ function animationMain() {
      autoAlpha: 0,
      y: 20,
      duration: 1,
-     delay: .3,
+     delay: .15,
      stagger: 0.12,
      scrollTrigger: {
        trigger: ".clients-wrap",

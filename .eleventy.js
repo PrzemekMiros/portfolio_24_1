@@ -94,7 +94,7 @@ module.exports = function(eleventyConfig) {
             width="${largestSrc.width}"
             height="${largestSrc.height}">`;
  
-          return `<div class="image-wrapper blur-load" ><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${lowestSrc.width}" height="${lowestSrc.height}"><picture> ${source} ${img} </picture></div>`;
+          return `<div class="image-wrapper blur-load" ><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
   
   
@@ -111,6 +111,7 @@ module.exports = function(eleventyConfig) {
           });
       
           let lowestSrc = stats['jpeg'][0];
+          let largestSrc = stats['jpeg'][2];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -134,7 +135,7 @@ module.exports = function(eleventyConfig) {
             width="${lowestSrc.width}"
             height="${lowestSrc.height}">`;
       
-            return `<div class="image-wrapper blur-load"><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${lowestSrc.width}" height="${lowestSrc.height}"><picture> ${source} ${img} </picture></div>`;
+            return `<div class="image-wrapper blur-load"><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
   
 
@@ -142,7 +143,7 @@ module.exports = function(eleventyConfig) {
           if (!alt) {
             throw new Error(`Missing \`alt\` on myImage from: ${src}`);
           }
-      
+        
           let stats = await Image(src, {
             widths: [25, 320, 640, 960, 1200, 1800, 2400],
             formats: ['jpeg', 'webp'],
@@ -151,6 +152,7 @@ module.exports = function(eleventyConfig) {
           });
       
           let lowestSrc = stats['jpeg'][0];
+          let largestSrc = stats['jpeg'][2];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -174,7 +176,7 @@ module.exports = function(eleventyConfig) {
             width="${lowestSrc.width}"
             height="${lowestSrc.height}">`;
       
-            return `<div class="image-wrapper blur-load"><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${lowestSrc.width}" height="${lowestSrc.height}"><picture> ${source} ${img} </picture></div>`;
+            return `<div class="image-wrapper blur-load"><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
         
 
