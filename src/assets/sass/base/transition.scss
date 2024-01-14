@@ -2,7 +2,7 @@
 .transition-blur {
   opacity: 1;
 	filter: blur(0px);
-	transition: .3s ease-in-out
+	transition: .35s ease-in-out
 }
   
 html.is-animating .transition-blur {
@@ -36,6 +36,6 @@ html.is-changing .page-overlay-in {
 
 .swup-progress-bar {
     height: 3px;
-    background-color: var(--color-light-1);
+    background-color: var(--color-accent-1);
     z-index: 999999
   }

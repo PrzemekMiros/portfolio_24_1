@@ -1,5 +1,6 @@
 :root {
   --easing-1: .5s cubic-bezier(.79,0,.07,.88);
+  --radius-1: 9px;
 }
 
 body {
@@ -24,26 +25,32 @@ body {
     background-position: center;
   }
 
-  .blur-load {
+  .image-wrapper {
+    border-radius: 9px;
+  }
+
+  .blur-load .placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    filter: blur(10px);
-    transition: filter .5s ease-in-out;
+    filter: blur(5px);
+    transition: opacity .3s cubic-bezier(.79,0,.07,.88) .3s;
+    z-index: 1
   }
   
-  .blur-load.loaded {
-    filter: blur(0px);
+  .blur-load.loaded .placeholder {
+    opacity: 0
   }
   
-  .blur-load img {
-    opacity: 0;
-    transition: opacity .75s ease-in-out;
+  .blur-load picture img {
+    transition: opacity .3s cubic-bezier(.79,0,.07,.88);
+    opacity: 0
   }
   
-  .blur-load.loaded img {
-    opacity: 1;
+  .blur-load.loaded picture img {
+    opacity: 1
   }
 
   a {

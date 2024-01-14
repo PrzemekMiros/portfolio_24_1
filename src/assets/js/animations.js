@@ -52,6 +52,7 @@ function animationMain() {
       });
        gsap.from(mySplitText.lines, {
            duration: 1,
+           delay: .3,
            stagger: 0.05,
            yPercent: 100,
            ease: Power2. easeInOut,
@@ -72,6 +73,7 @@ function animationMain() {
              opacity: 0,
              y: 20,
              duration: 1,
+             delay: .3,
              scrollTrigger: {
                scroller: ".scrollContainer",
                trigger: fadeInItem,
@@ -86,6 +88,7 @@ function animationMain() {
      gsap.from(lineXItem, { 
        width: "0",
        duration: .7,
+       delay: .3,
        ease: Power2. easeInOut,
        scrollTrigger: {
          scroller: ".scrollContainer",
@@ -256,7 +259,7 @@ function animationMain() {
    // parallax 
    if (window.matchMedia("(min-width: 767px)").matches) {
        gsap.utils.toArray(".parallax-wrap").forEach(function(container) {
-         let image = container.querySelector("img");
+         let image = container.querySelector("picture img");
        
          let tl = gsap.timeline({
              scrollTrigger: {
@@ -267,10 +270,10 @@ function animationMain() {
              },
            }); 
            tl.from(image, {
-             yPercent: -6,
+             yPercent: -5,
              ease: "none",
            }).to(image, {
-             yPercent: 6,
+             yPercent: 5,
              ease: "none",
            }); 
        });

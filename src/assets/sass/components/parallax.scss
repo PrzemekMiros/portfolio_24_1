@@ -3,7 +3,7 @@
     overflow: hidden;
     background-color: transparent;
     padding-bottom: calc(100% / (var(--ratio))); 
-    border-radius: 4px;
+    border-radius: 9px
   }
   .aspect_16-13 {
     --ratio: 1380/1285;
@@ -20,8 +20,8 @@
   .parallax-wrap img {
     position: absolute;
     top: 0%;
-    left: -3%;
-    width: 106%;
-    height: 106%;
+    left: -4%;
+    width: 108%;
+    height: 108%;
     object-fit: cover
   }

@@ -1,14 +1,12 @@
 @media(min-width:767px) {
 .portfolio-item {
-    overflow: hidden;
-    border-radius: 9px
+    border-radius: var(--radius-1);
+    overflow: hidden
 }
 .portfolio-item div {
-    // filter: grayscale(99%);
     transition: all 1.3s cubic-bezier(.79,0,.07,.88)
 }
 .portfolio-item:hover .parallax-wrap {
-    transform: scale(1.09);
-    filter: grayscale(0%)
+    transform: scale(1.09)
 }
 }

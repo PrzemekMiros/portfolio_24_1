@@ -1,9 +1,13 @@
 .client-card {
-  padding: 3em 2em;
+  padding: 3em 2em 6em;
   border-radius: 15px;
   background: var(--color-light-2);
   text-align: center;
   transition: var(--easing-1);
+}
+
+.client-image {
+  position: relative
 }
 
 .client-name p {
@@ -11,15 +15,6 @@
   font-weight: 500;
   font-size: 0.8rem;
   transition: var(--easing-1)
-}
-
-.client-card img {
-  width: 85%;
-  margin: 2em auto 4em;
-  transition: var(--easing-1);
-  background-image: none!important;
-  // filter: grayscale(99%);
-  // opacity: .85
 }
 
 .client-card:hover {
@@ -30,49 +25,49 @@
   color: var(--color-light-1);
 }
 
-.client-card:hover img {
+.client-card:hover picture img {
   -webkit-filter: invert(1) grayscale(100%);
   filter: invert(1) grayscale(100%);
 }
 
-.light .client-card img {
+.light .client-card picture img {
   transition: var(--easing-1);
   -webkit-filter: invert(0) grayscale(0%);
   filter: invert(0) grayscale(0%);
 }
-.light .client-card:hover img {
+.light .client-card:hover picture img {
   transition: var(--easing-1);
   -webkit-filter: invert(1) grayscale(100%);
   filter: invert(1) grayscale(100%);
 }
 
-.dark .client-card img {
+.dark .client-card picture img {
   -webkit-filter: invert(1) grayscale(100%);
   filter: invert(1) grayscale(100%);
 }
-.dark .client-card:hover img {
+.dark .client-card:hover picture img {
     -webkit-filter: invert(0) grayscale(0%);
     filter: invert(0) grayscale(0%);
   }
 
 @media (prefers-color-scheme: dark) {
-  .client-card img {
+  .client-card picture img {
     -webkit-filter: invert(1) grayscale(100%);
     filter: invert(1) grayscale(100%);
   }
-  .client-card:hover img {
+  .client-card:hover picture img {
     -webkit-filter: invert(0) grayscale(0%);
     filter: invert(0) grayscale(0%);
   }
 }
 
-.dark .client-card img {
+.dark .client-card picture img {
   transition: var(--easing-1);
   // filter: grayscale(99%) brightness(200%);
   // opacity: .85
 }
 
-.client-card:hover img {
+.client-card:hover picture img {
   // filter: grayscale(0) brightness(100%);
   opacity: 1;
 }

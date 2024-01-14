@@ -15,6 +15,9 @@
     padding: .3em;
     background-color: var(--color-light-2);
   }
+  .parallax-item-img {
+    position: relative;
+  }
   video {
     aspect-ratio: 10/6;
     object-fit: cover;
