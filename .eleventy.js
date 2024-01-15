@@ -213,12 +213,13 @@ module.exports = function(eleventyConfig) {
           const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
       
           const img = `<img
+            loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
             sizes='(min-width: 1024px) 1024px, 100vw'
             srcset="${srcset['jpeg']}"
-            width="${lowestSrc.width}"
-            height="${lowestSrc.height}">`;
+            width="${largestSrc.width}"
+            height="${largestSrc.height}">`;
       
             return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
