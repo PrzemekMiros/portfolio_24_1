@@ -42,10 +42,6 @@ if (document.querySelector('.swiper')) {
     grabCursor: true,
     spaceBetween: 20,
     lazy: true,
-    lazy: {
-        loadPrevNext: true,
-        loadOnTransitionStart: true
-    },
     centeredSlides: false,
     loop: true,
     pagination: {

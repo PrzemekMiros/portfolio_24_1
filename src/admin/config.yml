@@ -52,3 +52,15 @@ collections:
     fields:
       - {label: "Pytanie", name: "title", widget: "string"}
       - {label: "Odpowiedź", name: "answer", widget: "markdown"}
+
+
+ # Clients
+  - label: "Klienci"
+    name: "clients"
+    folder: "src/content/klienci"
+    media_folder: "img/"
+    public_folder: "/content/klienci/img/"
+    create: true
+    fields:
+      - {label: "Klient", name: "title", widget: "string"}
+      - {label: "Logo", name: "logo", widget: "image"}

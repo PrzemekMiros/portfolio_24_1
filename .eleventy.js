@@ -217,11 +217,12 @@ module.exports = function(eleventyConfig) {
             alt="${alt}"
             src="${lowestSrc.url}"
             sizes='(min-width: 1024px) 1024px, 100vw'
-            srcset="${srcset['jpeg']}"
+            data-srcset="${srcset['jpeg']}"
             width="${largestSrc.width}"
-            height="${largestSrc.height}">`;
+            height="${largestSrc.height}"
+            class="swiper-lazy" >`;
       
-            return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
+            return `<div class="image-wrapper"><img class="placeholder swiper-lazy" src="${lowestSrc.url}" alt="Wczytuję" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
   
 
