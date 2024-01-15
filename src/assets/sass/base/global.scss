@@ -29,6 +29,13 @@ body {
     border-radius: 9px;
   }
 
+  .image-wrapper img {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--color-dark-2);
+  }
+
   .blur-load .placeholder {
     position: absolute;
     top: 0;

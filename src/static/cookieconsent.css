@@ -530,7 +530,7 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
     flex-direction:column-reverse
 }
 #cc-main .cc--anim .cm,#cc-main .cc--anim.cm-wrapper:before{
-    transition: 1s opacity 2s linear forwards
+    transition: 1s opacity linear forwards 2s 
 }
 
 #cc-main .cc--anim .cm__btn,#cc-main .cc--anim .cm__close{
@@ -706,7 +706,6 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
 #cc-main .pm__body{
     flex:1;
     overflow-y:auto;
-    overflow-y:overlay
 }
 #cc-main .pm__section,#cc-main .pm__section--toggle{
     border-radius:var(--cc-btn-border-radius);
