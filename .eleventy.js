@@ -220,9 +220,9 @@ module.exports = function(eleventyConfig) {
             data-srcset="${srcset['jpeg']}"
             width="${largestSrc.width}"
             height="${largestSrc.height}"
-            class="swiper-lazy" >`;
+            class="swiper-lazy">`;
       
-            return `<div class="image-wrapper"><img class="placeholder swiper-lazy" src="${lowestSrc.url}" alt="Wczytuję" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
+            return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
   
 

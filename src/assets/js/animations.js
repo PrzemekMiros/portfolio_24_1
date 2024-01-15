@@ -192,20 +192,6 @@ function animationMain() {
        }
      }; 
    };
-   
-   // Client logos
-   gsap.from(".client-item", {
-     opacity: 0,
-     autoAlpha: 0,
-     y: 20,
-     duration: 1,
-     delay: .15,
-     stagger: 0.12,
-     scrollTrigger: {
-       trigger: ".clients-wrap",
-       scroller: ".scrollContainer",
-     }
-   });
      
    // Nav menu
    const menuToggle = document.getElementById("menuToggle");
