@@ -22,7 +22,7 @@
   font-weight: 500;
   src: url('/assets/fonts/poppins-v20-latin_latin-ext-500.woff2') format('woff2'); 
 }
-/*
+
 @font-face {
   font-display: swap; 
   font-family: 'Telegraf';
@@ -46,11 +46,11 @@
   font-weight: 500;
   src: url('/assets/fonts/PPTelegraf-UltraBold.otf'); 
 }
-*/
+
 
 :root {
   --font-primary: "Poppins";
-  --font-secondary: "Poppins";
+  --font-secondary: "Telegraf";
 }
 
 .xxxl, .xxl, .xl, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -135,7 +135,7 @@ p, .paragraph, li {
   margin-bottom: 2em;
   font-family: var(--font-primary);
   font-size: clamp(15px, 1.2vw, 16px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.8;
   color: var(--color-text)
 }
