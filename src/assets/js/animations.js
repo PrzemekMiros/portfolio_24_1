@@ -101,7 +101,6 @@ function animationMain() {
    // Footer parallax
    if (window.matchMedia("(min-width: 767px)").matches) {
      gsap.from(".footer-parallax", {
-       opacity: 0,
        y: "-25%",
        scrollTrigger: {
          scroller: ".scrollContainer",
@@ -113,7 +112,6 @@ function animationMain() {
      });
      } else {
        gsap.from(".footer-parallax", {
-         opacity: 0,
          y: "-15%",
          scrollTrigger: {
            scroller: ".scrollContainer",

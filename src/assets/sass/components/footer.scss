@@ -39,9 +39,27 @@
   color: var(--color-dark-1)
 }
 
+.footer-card a {
+  display: inline-block;
+  margin-right: .3em;
+  transition: var(--easing-1)
+}
+
+.footer-card a:hover {
+  color: var(--color-accent-1)
+}
+
 .footer-card svg {
   width: 44px;
   height: auto
+}
+
+.footer-card svg path {
+  transition: var(--easing-1)
+}
+
+.footer-card a:hover svg path {
+  fill: var(--color-accent-1)
 }
 
 

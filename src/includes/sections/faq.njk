@@ -7,9 +7,9 @@
           <div class="accordion-wrap pt-small"> 
             <div class="line-x lx-op d-md-none mt-5 mt-md-0"></div>
             {% for post in collections.faq %}
-            <div class="mt-4 pt-xsmall pb-xsmall">
-              <button class="accordion">
-                <span class="h3 title split-text-lines">
+            <div class="">
+              <button class="accordion mt-4 pt-xsmall pb-xsmall">
+                <span class="h3 title my-0 split-text-lines">
                   {{ post.data.title }}
                 </span>
                 <span class="icon fadeIn"></span>
@@ -20,7 +20,7 @@
                 </p>
               </div>
             </div>
-            <div class="line-x lx-op"></div>
+            <div class="line-x lx-op mt-4"></div>
             {% endfor %}
           </div>
         </div>
