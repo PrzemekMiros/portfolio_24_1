@@ -1,21 +1,18 @@
 <section class="pb-medium" data-scroll-section>
     <div class="container">
-        <div class="col-md-10 mx-auto">
-            <div class="pb-medium">
-                <div class="pb-large">
-                    <div class="line-x"></div>
-                </div>
-                <h2 class="h1 my-0 split-text-lines text-behind" tg-txt-name="Artykuły">
-                    Najnowsze wpisy<span class="dot">.</span>
-                </h2>
-            </div>
+        <div class="offset-md-3 col-md-6 pb-xsmall">
+            <h2 class="xl split-text-lines">
+                Artykuły<span class="dot">.</span>
+            </h2>
+        </div>
+        <div class="col-md-12">
             <div class="row gx-3">
-                    {% for post in collections.posts.slice(0,3) %}
-                    <div class="col-md-4 pb-small fadeIn">
+                {% for post in collections.posts.slice(0,4) %}
+                    <div class="col-md-3 pb-small fadeIn">
                         <a href="{{ post.url }}" title="{{ post.data.title }}">
                             <div class="portfolio-item fadeIn">
                                 <div class="parallax-wrap aspect_16-9">
-                                    <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}" loading="lazy" />
+                                  {% blogImage "src/" + post.data.thumbnail, post.data.title %}
                                 </div>
                             </div>
                         </a>
@@ -41,7 +38,7 @@
                         </a>
                         <div class="line-x lx-1 lx-op"></div>
                     </div>
-                    {% endfor %}
+                {% endfor %}
             </div>
         </div>
     </div>
