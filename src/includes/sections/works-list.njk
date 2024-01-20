@@ -5,13 +5,13 @@
           {% set counter = 1 %} 
           {% for post in collections.works.slice(0, 5) %}
             <a href="{{ post.url }}" title="{{ post.data.client }}">
-                <div class="item-work row pt-small pt-md-medium pb-small pb-md-medium">
+                <div class="item-work row pt-small pt-md-medium pb-xsmall pb-md-medium">
                     <div class="offset-md-2 col-md-1 d-none d-md-block">
                         <p class="item-work-number mb-3 fadeIn">
                             0{{ counter }}
                         </p>
                     </div>
-                    <div class="d-md-none pb-small">
+                    <div class="d-md-none pb-xsmall">
                         <div class="portfolio-item fadeIn">
                                 <div class="parallax-wrap aspect_16-13">
                                     {% workImage "src/" + post.data.thumbnail, post.data.title %}
@@ -20,13 +20,13 @@
                     </div>
                     <div class="col-md-6">
                         <h3 class="xl split-text-lines mt-0 mb-4 mb-md-2 d-none d-md-block">{{ post.data.client }}</h3>
+                        <p class="split-text-lines color-accent-1 bold mt-0 mb-3 d-md-none">
+                            {{ post.data.title }}
+                        </p>
                         <h3 class="h2 split-text-lines mt-0 mb-4 mb-md-2 d-md-none">{{ post.data.client }}</h3>
-                        <div class="item-work-list fadeIn">
-                            <span>Design</span>
-                            <span>Development</span>
-                            <span>Pozycjonowanie</span>
-                            <span>Administracja</span>
-                        </div>
+                        <p class="col-md-11 fadeIn line-clamp-2">
+                            {{ post.data.description }}
+                        </p>
                     </div>
                     <div class="col-md-2 d-none d-md-block">
                         <svg fill="none" height="36" viewBox="0 0 14 14" width="36" xmlns="http://www.w3.org/2000/svg" class="item-work-arrow fadeIn"><path d="M13 1L1 13" stroke="var(--color-dark-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M3 1H13V11" stroke="var(--color-dark-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></svg>

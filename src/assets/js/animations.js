@@ -228,6 +228,7 @@ function animationMain() {
    }, "-=0.6");
    tl.from('.line-xh', {
     duration: 1,
+    stagger: .1,
     width: "0",
     ease: 'Expo.easeInOut'
    }, "-=1.3");
