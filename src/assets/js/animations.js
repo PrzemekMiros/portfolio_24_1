@@ -226,13 +226,18 @@ function animationMain() {
        stagger: 0.1,
        ease: 'Expo.easeInOut'
    }, "-=0.6");
+   tl.from('.line-xh', {
+    duration: 1,
+    width: "0",
+    ease: 'Expo.easeInOut'
+   }, "-=1.3");
    tl.from('.nav-info', {
        duration: .6,
        opacity: 0,
      y: 20,
      ease: Power3,
    }, "-=0.8");
-   tl.from('.h-line-y', {
+   tl.from('.line-yh', {
        duration: 1,
        height: "0",
        ease: 'Expo.easeInOut'
