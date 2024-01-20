@@ -7,7 +7,7 @@ thumbnail: /content/realizacje/img/business-thumb-big.jpg
 imageMain: /content/realizacje/img/business-thumb-big.jpg
 imageGridOne: /content/realizacje/img/longscroll-1.jpg
 imageGridTwo: /content/realizacje/img/longscroll-2.jpg
-date: 2023-08-03T20:19:43.571Z
+date: 2022-09-03T20:19:43.571Z
 link: https://businesswomanlife.pl/
 category:
   - Portal internetowy

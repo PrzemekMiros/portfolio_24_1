@@ -99,6 +99,7 @@ function animationMain() {
    });
 
    // Scroll progress
+   if (window.matchMedia("(min-width: 767px)").matches) {
    gsap.to(".scrollprogress", {
     height: "100vh",
     ease: 'none',
@@ -110,6 +111,7 @@ function animationMain() {
       scrub: true,
     }
   });
+  };
 
    // Footer parallax
    if (window.matchMedia("(min-width: 767px)").matches) {

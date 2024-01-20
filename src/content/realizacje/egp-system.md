@@ -2,7 +2,7 @@
 client: EGP System
 title: Producent nanokoloidów
 description: Strona i sklep interentowy dla producenta nanokoloidów. Systemem zarządzania treścią Wordpress, sklep oparty na Woocommerce, integracja z Baselinker.
-date: 2023-06-21
+date: 2021-09-21
 author: Przemek
 thumbnail: /content/realizacje/img/egp-thumb-big.jpg
 imageMain: /content/realizacje/img/egp-img.jpg
