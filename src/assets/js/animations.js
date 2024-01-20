@@ -62,7 +62,7 @@ function animationMain() {
              start: "top 95%",
              //toggleActions: 'restart pause reverse pause',
            },
-       })
+       });
    });
    };
    

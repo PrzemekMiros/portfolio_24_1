@@ -35,15 +35,15 @@
 
 .archive-category {
     margin: 1.8em 0 1.3em;
-    padding: 2px 20px 1px;
+    padding: 3px 20px 5px;
     width: fit-content;
     font-weight: 500;
     line-height: 1;
     letter-spacing: 1px;
     text-transform: uppercase;
-    background-color: var(--color-accent-2);
+    background-color: var(--color-accent-1);
     color: #fff;
-    border-radius: 5px
+    border-radius: 3px
 }
 
 @media(min-width:767px) {
