@@ -3,18 +3,18 @@
   opacity: 1;
 	filter: blur(0px);
   -webkit-filter: blur(0px);
-	transition: .15s ease-in-out
+	transition: .3s ease-in-out
 }
   
 html.is-animating .transition-blur {
   filter: blur(50px);
-  -webkit-filter: blur(50px);
+  -webkit-filter: blur(10px);
   opacity: 0
 }
 
 html.is-rendering .transition-blur {
   filter: blur(50px);
-  -webkit-filter: blur(50px);
+  -webkit-filter: blur(10px);
   opacity: 0
 }
 
@@ -38,7 +38,7 @@ html.is-changing .page-overlay-in {
 */
 
 .swup-progress-bar {
-    height: 3px;
+    height: 5px;
     background-color: var(--color-accent-1);
     z-index: 999999
   }

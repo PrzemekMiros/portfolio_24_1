@@ -97,7 +97,20 @@ function animationMain() {
        }
    })
    });
-   
+
+   // Scroll progress
+   gsap.to(".scrollprogress", {
+    height: "100vh",
+    ease: 'none',
+    scrollTrigger: { 
+      scroller: ".scrollContainer",
+      trigger: ".scrollContainer",
+      start: "top 0%",
+      end: "bottom 99%",
+      scrub: true,
+    }
+  });
+
    // Footer parallax
    if (window.matchMedia("(min-width: 767px)").matches) {
      gsap.from(".footer-parallax", {
@@ -262,58 +275,6 @@ function animationMain() {
            }); 
        });
      };
-   
-     // Acordion
-     if (document.querySelector(".accordion")) {
-     let t = document.getElementsByClassName("accordion");
-     for (let e = 0; e < t.length; e++) t[e].addEventListener("click", function () {
-       let e = this.nextElementSibling;
-       if (e.style.maxHeight) e.style.maxHeight = null, this.classList.remove("open");
-       else {
-         for (let a = 0; a < t.length; a++) t[a].classList.remove("open"), t[a].nextElementSibling.style.maxHeight = null;
-         e.style.maxHeight = e.scrollHeight + "px", this.classList.toggle("open");
-       }
-     });
-     };
-   
-   // Scroll progress
-   if (document.querySelector(".scrollprogress")) {
-   gsap.to(".scrollprogress", {
-     height: "calc(100% - 65px)",
-     ease: 'none',
-     scrollTrigger: { 
-       scroller: ".scrollContainer",
-       trigger: ".content",
-       start: "top 80px",
-       end: "bottom 99%",
-       scrub: true,
-     }
-   });
-   };
-
-// Cursor gradient
-/*
-const cursor = document.querySelector('.bg-gradient');
-let mouseX = 0;
-let mouseY = 0;
-let cursorX = 0;
-let cursorY = 0;
-let speed = 0.05;
-function animate() {
-    let distX = mouseX - cursorX;
-    let distY = mouseY - cursorY;
-    cursorX = cursorX + (distX * speed);
-    cursorY = cursorY + (distY * speed);
-    cursor.style.left = cursorX + 'px';
-    cursor.style.top = cursorY + 'px';
-    requestAnimationFrame(animate);
-}
-animate();
-document.addEventListener('mousemove', (event) => {
-    mouseX = event.pageX;
-    mouseY = event.pageY;
-});
-*/
 
 // Reveal images parallax
 if (document.querySelector(".works")) {
@@ -369,19 +330,14 @@ document.querySelector(".items-works").addEventListener("mouseleave", function (
     });
   });
 };
-
 };
 };
-
 
 // Reveal images
-
 function imageReveal() {
   const revealContainers = document.querySelectorAll(".reveal");
-
   revealContainers.forEach((container) => {
     let clipPath;
-
     // Left to right
     if (container.classList.contains("reveal--left")) {
       clipPath = "inset(0 0 0 100%)";
@@ -432,11 +388,9 @@ function imageReveal() {
 
   ScrollTrigger.refresh();
 }
-
 imageReveal();
 
 
-   
 // End animation
 }
    
