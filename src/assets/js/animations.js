@@ -38,35 +38,53 @@ function animationMain() {
        lastScrollPos = currentScrollPos;
      });
 
-    // Paragraph --------------------------------------------------------------
-   if (document.querySelector('.split-text-lines')) {
-   let splitTextLines = [...document.querySelectorAll('.split-text-lines')];
-   splitTextLines.forEach(element =>{
+    // Headings --------------------------------------------------------------
+   if (document.querySelector('.split-text-chars')) {
+   let splitTextChars = [...document.querySelectorAll('.split-text-chars')];
+   splitTextChars.forEach(element =>{
       let mySplitText = new SplitText(element, {
-        type:"lines",
-        linesClass: "line"
+        type:"chars",
+        charsClass: "char"
       });
-       new SplitText(element, {
-        type:"lines",
-        linesClass: "line-parent",
-      });
-       gsap.from(mySplitText.lines, {
+       gsap.from(mySplitText.chars, {
            duration: 1,
-           delay: .15,
-           stagger: 0.05,
+           delay: .25,
+           stagger: 0.01,
            yPercent: 100,
            ease: Power2. easeInOut,
-           scrollTrigger: { 
-             scroller: ".scrollContainer",
-             trigger: element,
-             start: "top 95%",
-             //toggleActions: 'restart pause reverse pause',
-           },
        });
    });
    };
    
-   // Fade in
+ // Paragraph --------------------------------------------------------------
+ if (document.querySelector('.split-text-lines')) {
+  let splitTextLines = [...document.querySelectorAll('.split-text-lines')];
+  splitTextLines.forEach(element =>{
+     let mySplitText = new SplitText(element, {
+       type:"lines",
+       linesClass: "line"
+     });
+      new SplitText(element, {
+       type:"lines",
+       linesClass: "line-parent",
+     });
+      gsap.from(mySplitText.lines, {
+          duration: 1,
+          delay: .15,
+          stagger: 0.05,
+          yPercent: 100,
+          ease: Power2. easeInOut,
+          scrollTrigger: { 
+            scroller: ".scrollContainer",
+            trigger: element,
+            start: "top 95%",
+            //toggleActions: 'restart pause reverse pause',
+          },
+      });
+  });
+  };
+  
+   // Fade in --------------------------------------------------------------
        const fadeIn = gsap.utils.toArray('.fadeIn');
          fadeIn.forEach(fadeInItem => {
            gsap.from(fadeInItem, { 
