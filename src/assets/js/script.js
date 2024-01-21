@@ -39,6 +39,7 @@ function appMain() {
   if (document.querySelector(".swiper")) {
     var swiper = new Swiper(".swiper", {
       grabCursor: true,
+      slidesPerView: 2,
       spaceBetween: 20,
       lazy: true,
       centeredSlides: false,
@@ -63,16 +64,16 @@ function appMain() {
       mousewheel: false,
       breakpoints: {
         460: {
-          slidesPerView: 1,
+          slidesPerView: 2,
         },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 3
         },
         991: {
           slidesPerView: 3,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 4,
         },
         1200: {
           slidesPerView: 4,

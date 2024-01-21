@@ -64,7 +64,8 @@
         {% for post in collections.clients %}
         <div class="swiper-slide fadeIn">
           <div class="client-card">
-            <div class="client-name">
+          <div class="client-content">
+            <div class="client-name d-none d-md-block">
               <p class="mt-0 mb-5">{{ post.data.title }}</p>
             </div>
             <div class="client-image">
@@ -75,6 +76,7 @@
               </svg>
             </div>      
             </div>
+          </div>
           </div>
         </div>
         {% endfor %}

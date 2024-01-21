@@ -1,14 +1,18 @@
 .client-card {
-  padding: 3em 2em 6.5em;
-  border-radius: 15px;
+  width: 100%
+}
+
+.client-content {
+  padding: 1.5em 1em 1.5em;
   background: var(--color-light-2);
   text-align: center;
+  border-radius: 15px;
   transition: var(--easing-1);
 }
 
 .client-image {
   position: relative;
-  margin-top: 4.5em;
+  margin-top: 0;
   width: 85%;
   margin-left: auto;
   margin-right: auto;
@@ -33,7 +37,7 @@
   transition: var(--easing-1)
 }
 
-.client-card:hover {
+.client-card:hover .client-content {
   background-color: var(--color-dark-1);
 }
 
@@ -86,4 +90,13 @@
 .client-card:hover picture img {
   // filter: grayscale(0) brightness(100%);
   opacity: 1;
+}
+
+@media(min-width:767px) {
+  .client-content {
+    padding: 3em 2em 6.5em
+  }
+  .client-image {
+    margin-top: 4.5em
+  }
 }
